@@ -1,0 +1,183 @@
+﻿1-1   Uw eerste aanvraag           boxes=1 pushes=  7 moves=  12 states=     21 (0.0s)
+      ###########
+      #p   #   k#
+      # $       #
+      #  @    . #
+      #         #
+      #bc     bc#
+      ###########
+1-2   Paspoort verlopen            boxes=2 pushes= 15 moves=  37 states=    287 (0.0s)
+      ############
+      #a   #    p#
+      #    #$    #
+      #  .   @   #
+      #    #$  . #
+      #bc  #   bc#
+      ############
+1-3   Verhuizing doorgeven         boxes=2 pushes= 17 moves=  72 states=    407 (0.0s)
+      #############
+      #k    #    p#
+      #  .  #   $ #
+      #  .     @  #
+      #     #     #
+      #bc   ## $###
+      #          a#
+      #############
+1-4   Rijbewijs ophalen            boxes=3 pushes= 21 moves=  69 states=   4399 (0.4s)
+      #############
+      #p   ###   a#
+      #         $ #
+      #  ...  @ $ #
+      #        $  #
+      ###  #b#  ###
+      #k         r#
+      #############
+2-1   Dakkapel aanvragen           boxes=3 pushes= 35 moves= 168 states=   3786 (0.2s)
+      ##############
+      #bc  #      p#
+      # $$ #  #    #
+      #@$     #  . #
+      ###  ###   . #
+      #      .  #  #
+      #k   #       #
+      ##############
+2-2   Kapvergunning                boxes=3 pushes= 27 moves=  92 states=   1439 (0.0s)
+      ##############
+      #   p   p    #
+      # $###$ ###  #
+      #  .  @    . #
+      # $###  ###  #
+      #   p   .   k#
+      ##############
+2-3   Evenementenvergunning        boxes=3 pushes= 30 moves=  82 states=   2887 (0.1s)
+      #############
+      #k  #   #  r#
+      #           #
+      #   #   # $ #
+      ## ##   ##@##
+      #  .  # $.$ #
+      #  . pbc    #
+      #############
+2-4   Bezwaarschrift               boxes=4 pushes= 36 moves= 105 states=  11235 (0.3s)
+      ##############
+      #a@#     #  a#
+      # $# $   #   #
+      #         .. #
+      #  #   $ #.. #
+      #bc# $####  ##
+      #        p   #
+      ##############
+3-1   Blauwe envelop               boxes=4 pushes= 20 moves=  86 states=    554 (0.0s)
+      ############
+      #a  ##  ##k#
+      #  $@$     #
+      ## #### # ##
+      #     # $.*#
+      # ##     ..#
+      #    #  ####
+      ############
+3-2   Voorlopige aanslag           boxes=4 pushes= 17 moves= 128 states=    131 (0.0s)
+      ###########
+      ###  #  ###
+      # $     $@#
+      # ## ### ##
+      #     .. #
+      ## # #**##
+      #        #
+      ##########
+3-3   Naheffing                    boxes=4 pushes= 21 moves=  74 states=    992 (0.0s)
+      ############
+      #   ##     #
+      # .  $ ### #
+      # $#*#  .  #
+      ## #@$  #  #
+      #  #### #  #
+      #    .     #
+      ############
+3-4   Box 3                        boxes=5 pushes= 28 moves= 171 states=   7330 (0.1s)
+      #############
+      #k  #   #   #
+      # # $$# $ # #
+      #   # . #   #
+      ## ##  $## ##
+      #@$.   .  . #
+      ###  # . ####
+      #############
+4-1   Ministerraad                 boxes=5 pushes= 35 moves= 156 states= 763570 (79.4s)
+      #################
+      #bc   #    #  p #
+      #     #$$  #@$  #
+      #  #        $$# #
+      #  ####  ###  # #
+      #             # #
+      ###  #####  ... #
+      #k        #  .. #
+      #################
+4-2   Persconferentie              boxes=5 pushes= 24 moves= 181 states=  28381 (1.8s)
+      ################
+      #p    #   #   a#
+      # $##   #   #  #
+      #   #  ###  #  #
+      ## ###  $@###  #
+      # $ $ $  #     #
+      #  ....  #  #  #
+      #   .    #   bc#
+      ################
+4-3   Coalitieakkoord              boxes=6 pushes= 26 moves= 134 states=    682 (0.0s)
+      #################
+      #k   #     #   r#
+      #    #  #  #    #
+      ## ###  #  ## ###
+      #               #
+      #  # $###### #  #
+      #  # *.*     $ ##
+      #  # .*+$ #     #
+      #################
+4-4   Torentje                     boxes=6 pushes= 23 moves=  92 states= 764325 (21.8s)
+      ################
+      #a  #  ##  #  a#
+      #    $ ##  $@  #
+      #  #        #  #
+      ### ## $$$## ###
+      #              #
+      # ##  ....$ ## #
+      #  #  #..#  #  #
+      ################
+5-1   Kelderverdieping             boxes=5 pushes= 27 moves= 187 states=  11775 (0.3s)
+      ##########
+      ###   ####
+      # $ #   ##
+      # # ##$###
+      #@$      #
+      ##$#$.. ##
+      ##   .. ##
+      ###  . ###
+      ##########
+5-2   Stoffige stellingkasten      boxes=4 pushes= 44 moves= 230 states=   3917 (0.1s)
+      ############
+      #    #     #
+      # .. #$### #
+      #  #     $ #
+      ## # $## # #
+      #  .. #@$  #
+      #     #  ###
+      ############
+5-3   Microfiche                   boxes=6 pushes= 45 moves= 284 states= 217726 (13.3s)
+      ##############
+      #     #      #
+      # ... # #### #
+      # ...    $@$ #
+      #     # ## # #
+      ### $##$ $$# #
+      #        #   #
+      ##############
+5-4   De Laatste Stempel           boxes=7 pushes= 31 moves= 172 states=   9685 (0.2s)
+      #############
+      #  #     #  #
+      #   $ #     #
+      ## # ### # ##
+      # $  $      #
+      # ##****.## #
+      #   ..@ #   #
+      #############
+Klaar in 118.2s

@@ -1,0 +1,342 @@
+{
+  "version": 1,
+  "departments": [
+    {
+      "id": 1,
+      "name": "Burgerzaken",
+      "motto": "Trek een nummertje en neem plaats.",
+      "levels": [
+        {
+          "id": "1-1",
+          "name": "Uw eerste aanvraag",
+          "note": "Breng het dossier naar het archief. Eén formulier, één loket.",
+          "map": [
+            "###########",
+            "#p   #   k#",
+            "# $       #",
+            "#  @    . #",
+            "#         #",
+            "#bc     bc#",
+            "###########"
+          ]
+        },
+        {
+          "id": "1-2",
+          "name": "Paspoort verlopen",
+          "note": "Twee aanvragen, twee archiefplekken. Neem een nummertje.",
+          "map": [
+            "############",
+            "#a   #    p#",
+            "#    #$    #",
+            "#  .   @   #",
+            "#    #$  . #",
+            "#bc  #   bc#",
+            "############"
+          ]
+        },
+        {
+          "id": "1-3",
+          "name": "Verhuizing doorgeven",
+          "note": "Uw nieuwe adres is bij ons bekend. Uw dossiers nog niet.",
+          "map": [
+            "#############",
+            "#k    #    p#",
+            "#  .  #   $ #",
+            "#  .     @  #",
+            "#     #     #",
+            "#bc   ## $###",
+            "#          a#",
+            "#############"
+          ]
+        },
+        {
+          "id": "1-4",
+          "name": "Rijbewijs ophalen",
+          "note": "Vergeet uw pasfoto niet. Of uw dossiers.",
+          "map": [
+            "#############",
+            "#p   ###   a#",
+            "#         $ #",
+            "#  ...  @ $ #",
+            "#        $  #",
+            "###  #b#  ###",
+            "#k         r#",
+            "#############"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Vergunningen",
+      "motto": "Voor het aanvragen van een vergunning is een vergunning vereist.",
+      "levels": [
+        {
+          "id": "2-1",
+          "name": "Dakkapel aanvragen",
+          "note": "Welstandscommissie vergadert. Archiveer intussen alles.",
+          "map": [
+            "##############",
+            "#bc  #      p#",
+            "# $$ #  #    #",
+            "#@$     #  . #",
+            "###  ###   . #",
+            "#      .  #  #",
+            "#k   #       #",
+            "##############"
+          ]
+        },
+        {
+          "id": "2-2",
+          "name": "Kapvergunning",
+          "note": "Voor één boom. In drievoud.",
+          "map": [
+            "##############",
+            "#   p   p    #",
+            "# $###$ ###  #",
+            "#  .  @    . #",
+            "# $###  ###  #",
+            "#   p   .   k#",
+            "##############"
+          ]
+        },
+        {
+          "id": "2-3",
+          "name": "Evenementenvergunning",
+          "note": "Het feest is al geweest. De vergunning nog niet.",
+          "map": [
+            "#############",
+            "#k  #   #  r#",
+            "#           #",
+            "#   #   # $ #",
+            "## ##   ##@##",
+            "#  .  # $.$ #",
+            "#  . pbc    #",
+            "#############"
+          ]
+        },
+        {
+          "id": "2-4",
+          "name": "Bezwaarschrift",
+          "note": "Uw bezwaar is ontvankelijk. Helaas.",
+          "map": [
+            "##############",
+            "#a@#     #  a#",
+            "# $# $   #   #",
+            "#         .. #",
+            "#  #   $ #.. #",
+            "#bc# $####  ##",
+            "#        p   #",
+            "##############"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Belastingdienst",
+      "motto": "Leuker kunnen we het niet maken. Smaller wel.",
+      "levels": [
+        {
+          "id": "3-1",
+          "name": "Blauwe envelop",
+          "note": "Er is post voor u. Het moet naar het archief.",
+          "map": [
+            "############",
+            "#a  ##  ##k#",
+            "#  $@$     #",
+            "## #### # ##",
+            "#     # $.*#",
+            "# ##     ..#",
+            "#    #  ####",
+            "############"
+          ]
+        },
+        {
+          "id": "3-2",
+          "name": "Voorlopige aanslag",
+          "note": "Definitief wordt het pas na archivering.",
+          "map": [
+            "###########",
+            "###  #  ###",
+            "# $     $@#",
+            "# ## ### ##",
+            "#     .. #",
+            "## # #**##",
+            "#        #",
+            "##########"
+          ]
+        },
+        {
+          "id": "3-3",
+          "name": "Naheffing",
+          "note": "U had dit dossier eerder moeten verplaatsen.",
+          "map": [
+            "############",
+            "#   ##     #",
+            "# .  $ ### #",
+            "# $#*#  .  #",
+            "## #@$  #  #",
+            "#  #### #  #",
+            "#    .     #",
+            "############"
+          ]
+        },
+        {
+          "id": "3-4",
+          "name": "Box 3",
+          "note": "Een ingewikkelde regeling. Net als dit kantoor.",
+          "map": [
+            "#############",
+            "#k  #   #   #",
+            "# # $$# $ # #",
+            "#   # . #   #",
+            "## ##  $## ##",
+            "#@$.   .  . #",
+            "###  # . ####",
+            "#############"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Ministerie van Algemene Zaken",
+      "motto": "Alle zaken zijn hier algemeen. Behalve de uwe.",
+      "levels": [
+        {
+          "id": "4-1",
+          "name": "Ministerraad",
+          "note": "Vrijdagmiddag. Iedereen wil naar huis. U ook.",
+          "map": [
+            "#################",
+            "#bc   #    #  p #",
+            "#     #$$  #@$  #",
+            "#  #        $$# #",
+            "#  ####  ###  # #",
+            "#             # #",
+            "###  #####  ... #",
+            "#k        #  .. #",
+            "#################"
+          ]
+        },
+        {
+          "id": "4-2",
+          "name": "Persconferentie",
+          "note": "Geen vragen meer, alleen nog dossiers.",
+          "map": [
+            "################",
+            "#p    #   #   a#",
+            "# $##   #   #  #",
+            "#   #  ###  #  #",
+            "## ###  $@###  #",
+            "# $ $ $  #     #",
+            "#  ....  #  #  #",
+            "#   .    #   bc#",
+            "################"
+          ]
+        },
+        {
+          "id": "4-3",
+          "name": "Coalitieakkoord",
+          "note": "Iedereen moet een stukje opschuiven.",
+          "map": [
+            "#################",
+            "#k   #     #   r#",
+            "#    #  #  #    #",
+            "## ###  #  ## ###",
+            "#               #",
+            "#  # $###### #  #",
+            "#  # *.*     $ ##",
+            "#  # .*+$ #     #",
+            "#################"
+          ]
+        },
+        {
+          "id": "4-4",
+          "name": "Torentje",
+          "note": "Het mooiste kantoor van het land. Ook het volste.",
+          "map": [
+            "################",
+            "#a  #  ##  #  a#",
+            "#    $ ##  $@  #",
+            "#  #        #  #",
+            "### ## $$$## ###",
+            "#              #",
+            "# ##  ....$ ## #",
+            "#  #  #..#  #  #",
+            "################"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Het Archief",
+      "motto": "Wat hier binnenkomt, komt er nooit meer uit.",
+      "levels": [
+        {
+          "id": "5-1",
+          "name": "Kelderverdieping",
+          "note": "Het licht doet het niet. De dossiers wel.",
+          "map": [
+            "##########",
+            "###   ####",
+            "# $ #   ##",
+            "# # ##$###",
+            "#@$      #",
+            "##$#$.. ##",
+            "##   .. ##",
+            "###  . ###",
+            "##########"
+          ]
+        },
+        {
+          "id": "5-2",
+          "name": "Stoffige stellingkasten",
+          "note": "Sinds 1987 niet meer afgestoft.",
+          "map": [
+            "############",
+            "#    #     #",
+            "# .. #$### #",
+            "#  #     $ #",
+            "## # $## # #",
+            "#  .. #@$  #",
+            "#     #  ###",
+            "############"
+          ]
+        },
+        {
+          "id": "5-3",
+          "name": "Microfiche",
+          "note": "Kleine letters, grote gevolgen.",
+          "map": [
+            "##############",
+            "#     #      #",
+            "# ... # #### #",
+            "# ...    $@$ #",
+            "#     # ## # #",
+            "### $##$ $$# #",
+            "#        #   #",
+            "##############"
+          ]
+        },
+        {
+          "id": "5-4",
+          "name": "De Laatste Stempel",
+          "note": "Rond de procedure af. Daarna mag u naar huis.",
+          "map": [
+            "#############",
+            "#  #     #  #",
+            "#   $ #     #",
+            "## # ### # ##",
+            "# $  $      #",
+            "# ##****.## #",
+            "#   ..@ #   #",
+            "#############"
+          ]
+        }
+      ]
+    }
+  ]
+}
