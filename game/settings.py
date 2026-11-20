@@ -10,6 +10,13 @@ ORGANISATION = "Rijksdienst voor Dossierverplaatsing"
 ORG_SHORT = "RDV"
 VERSION = "1.0"
 
+# Discord Rich Presence: the "Application ID" of your app on
+# https://discord.com/developers/applications (leave empty to disable).
+DISCORD_CLIENT_ID = "1572647721783791666"
+DISCORD_LARGE_IMAGE = "logo"     # asset key uploaded under Rich Presence > Art Assets
+DISCORD_WALK_WINDOW = 1600       # ms after the last step that still counts as walking
+DISCORD_PUSH_WINDOW = 2500       # ms after the last push that still counts as pushing
+
 HUD_H = 40
 STATUS_H = 28
 PLAY_RECT = (0, HUD_H, SCREEN_W, SCREEN_H - HUD_H - STATUS_H)

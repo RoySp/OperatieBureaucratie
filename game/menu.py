@@ -17,6 +17,9 @@ DOWN_KEYS = (pygame.K_DOWN, pygame.K_s)
 LEFT_KEYS = (pygame.K_LEFT, pygame.K_a)
 RIGHT_KEYS = (pygame.K_RIGHT, pygame.K_d)
 OK_KEYS = (pygame.K_RETURN, pygame.K_KP_ENTER, pygame.K_SPACE)
+# Secret code in the level select: up up down down left right left right B A
+SECRET_CODE = (pygame.K_UP, pygame.K_UP, pygame.K_DOWN, pygame.K_DOWN, pygame.K_LEFT,
+               pygame.K_RIGHT, pygame.K_LEFT, pygame.K_RIGHT, pygame.K_b, pygame.K_a)
 
 
 @dataclass
@@ -139,6 +142,9 @@ class MenuList:
 
 # ===================================================================== scenes
 class LoadingScene(Scene):
+    def presence(self):
+        return ("In het hoofdmenu", "Start het systeem op...")
+
     """'Een moment geduld alstublieft...' - the obligatory waiting room."""
 
     DURATION = 2300
@@ -184,6 +190,9 @@ class LoadingScene(Scene):
 
 
 class TitleScene(Scene):
+    def presence(self):
+        return ("In het hoofdmenu", "Bladert door het menu")
+
     def __init__(self, game):
         super().__init__(game)
         self.menu: Optional[MenuList] = None
@@ -320,6 +329,9 @@ class ConfirmScene(Scene):
 
 
 class OptionsScene(Scene):
+    def presence(self):
+        return ("In het hoofdmenu", "Vult formulier INST-7 in (opties)")
+
     opaque = False
 
     def __init__(self, game):
@@ -344,9 +356,13 @@ class OptionsScene(Scene):
             MenuItem("Muziekvolume", kind="slider", get=lambda: st["music_volume"], set=setter("music_volume")),
             MenuItem("Volledig scherm", kind="toggle", get=lambda: st["fullscreen"],
                      set=lambda v: game.toggle_fullscreen()),
-            MenuItem("Terug", self.close),
         ]
-        self.rect = pygame.Rect(170, 150, 460, 320)
+        if game.discord.active:
+            items.append(MenuItem("Discord-status", kind="toggle", get=lambda: st["discord"],
+                                  set=setter("discord")))
+        items.append(MenuItem("Terug", self.close))
+        height = 320 + 38 * (len(items) - 6)
+        self.rect = pygame.Rect(170, (600 - height) // 2, 460, height)
         self.menu = MenuList(game, items, (self.rect.x + 24, self.rect.y + 40, self.rect.w - 48, 0),
                              item_h=38, font="normal")
 
@@ -371,6 +387,9 @@ class OptionsScene(Scene):
 
 
 class CreditsScene(Scene):
+    def presence(self):
+        return ("In het hoofdmenu", "Leest de credits")
+
     LINES = [
         ("OPERATIE BUREAUCRATIE", "title"),
         ("De weg naar het juiste loket", "sub"),
@@ -450,7 +469,14 @@ class CreditsScene(Scene):
 
 
 class LevelSelectScene(Scene):
+    def presence(self):
+        done = len([lv for lv in self.game.levels.levels if self.game.save.is_completed(lv.id)])
+        return ("In het hoofdmenu", f"Kiest een dossier ({done}/{len(self.game.levels.levels)} goedgekeurd)")
+
     ROW_H = 18
+    DEPT_H = 21
+    VIEW = pygame.Rect(32, 44, 410, 500)       # visible part of the list
+    BAR = pygame.Rect(446, 44, 8, 500)         # scrollbar track
 
     def __init__(self, game, from_pause=False):
         super().__init__(game)
@@ -458,22 +484,102 @@ class LevelSelectScene(Scene):
         levels = game.levels.levels
         last = game.levels.by_id(game.save.last_level) or game.levels.continue_level(game.save)
         self.index = last.index
-        self.rows = []  # (kind, obj, y)
-        y = 50
+        self.rows = []  # (kind, obj, y) with y relative to the top of the list
+        y = 4
         for dept in game.levels.departments:
             self.rows.append(("dept", dept, y))
-            y += 21
+            y += self.DEPT_H
             for lv in dept.levels:
                 self.rows.append(("level", lv, y))
                 y += self.ROW_H
             y += 3
+        self.content_h = y
+        self.level_y = {obj.index: y for kind, obj, y in self.rows if kind == "level"}
         self.levels = levels
         self.preview_cache = {}
         self.message = ""
         self.message_t = 0.0
+        self.message_ok = False
+        self.dragging = False
+        self.code = []  # (key, selection before that key) for the secret code
+        self.scroll = self.target = 0.0
+        self.follow_selection(center=True)
+        self.scroll = self.target
+
+    # ------------------------------------------------------------ scrolling
+    @property
+    def max_scroll(self) -> float:
+        return max(0, self.content_h - self.VIEW.h)
+
+    def scroll_to(self, value: float):
+        self.target = min(self.max_scroll, max(0.0, value))
+
+    def follow_selection(self, center=False):
+        """Scroll just enough to keep the selected level (and its heading) visible."""
+        y = self.level_y[self.index]
+        if center:
+            self.scroll_to(y - self.VIEW.h // 2)
+            return
+        lv = self.levels[self.index]
+        top = y - (self.DEPT_H + 4 if lv.department.levels[0] is lv else 2 * self.ROW_H)
+        bottom = y + 3 * self.ROW_H
+        if top < self.target:
+            self.scroll_to(top)
+        elif bottom > self.target + self.VIEW.h:
+            self.scroll_to(bottom - self.VIEW.h)
+
+    def select(self, index: int):
+        index = max(0, min(len(self.levels) - 1, index))
+        if index != self.index:
+            self.game.sound.play("menu_move")
+        self.index = index
+        self.follow_selection()
+
+    def thumb_rect(self) -> pygame.Rect:
+        if self.max_scroll <= 0:
+            return self.BAR.copy()
+        h = max(24, int(self.BAR.h * self.VIEW.h / self.content_h))
+        y = self.BAR.y + int((self.BAR.h - h) * self.scroll / self.max_scroll)
+        return pygame.Rect(self.BAR.x, y, self.BAR.w, h)
+
+    def _drag_to(self, mouse_y):
+        thumb = self.thumb_rect()
+        free = self.BAR.h - thumb.h
+        if free > 0:
+            frac = (mouse_y - self.BAR.y - thumb.h / 2) / free
+            self.scroll_to(frac * self.max_scroll)
+            self.scroll = self.target
 
     def _row_rect(self, y):
-        return pygame.Rect(36, y, 402, self.ROW_H - 1)
+        return pygame.Rect(self.VIEW.x + 4, self.VIEW.y + y - int(self.scroll), 402, self.ROW_H - 1)
+
+    def level_at(self, pos):
+        if not self.VIEW.collidepoint(pos):
+            return None
+        for kind, obj, y in self.rows:
+            if kind == "level" and self._row_rect(y).collidepoint(pos):
+                return obj
+        return None
+
+    def check_code(self, key) -> bool:
+        """Track the secret code. Returns True when it was just completed."""
+        self.code.append((key, self.index))
+        # keep the longest tail that is still a valid start of the code
+        while self.code and tuple(k for k, _ in self.code) != SECRET_CODE[:len(self.code)]:
+            self.code.pop(0)
+        if len(self.code) < len(SECRET_CODE):
+            return False
+        g = self.game
+        start = self.code[0][1]
+        self.code = []
+        on = g.save.toggle_unlock_all()
+        g.sound.play("stamp" if on else "undo")
+        self.select(start)  # undo the cursor moves made while typing the code
+        self.message = ("GEHEIME MACHTIGING: alle dossiers zijn vrijgegeven." if on else
+                        "Machtiging ingetrokken: niet-afgeronde dossiers zijn weer in behandeling.")
+        self.message_t = 3500
+        self.message_ok = True
+        return True
 
     def play_selected(self):
         g = self.game
@@ -482,6 +588,7 @@ class LevelSelectScene(Scene):
             g.sound.play("error")
             self.message = "Uw aanvraag is nog in behandeling. Voltooi eerst het vorige dossier."
             self.message_t = 2500
+            self.message_ok = False
             return
         g.sound.play("menu_select")
         from .play import start_level
@@ -489,49 +596,72 @@ class LevelSelectScene(Scene):
 
     def handle_event(self, e):
         g = self.game
+        n = len(self.levels)
         if e.type == pygame.KEYDOWN:
+            if self.check_code(e.key):
+                return
             if e.key == pygame.K_ESCAPE:
                 g.sound.play("menu_move")
                 g.pop()
             elif e.key in UP_KEYS:
-                self.index = (self.index - 1) % len(self.levels)
-                g.sound.play("menu_move")
+                self.select((self.index - 1) % n)
             elif e.key in DOWN_KEYS:
-                self.index = (self.index + 1) % len(self.levels)
-                g.sound.play("menu_move")
-            elif e.key in LEFT_KEYS or e.key == pygame.K_PAGEUP:
+                self.select((self.index + 1) % n)
+            elif e.key in LEFT_KEYS:
                 dept = self.levels[self.index].department
                 prev = max(0, g.levels.departments.index(dept) - 1)
-                self.index = g.levels.departments[prev].levels[0].index
-                g.sound.play("menu_move")
-            elif e.key in RIGHT_KEYS or e.key == pygame.K_PAGEDOWN:
+                self.select(g.levels.departments[prev].levels[0].index)
+            elif e.key in RIGHT_KEYS:
                 dept = self.levels[self.index].department
                 nxt = min(len(g.levels.departments) - 1, g.levels.departments.index(dept) + 1)
-                self.index = g.levels.departments[nxt].levels[0].index
-                g.sound.play("menu_move")
+                self.select(g.levels.departments[nxt].levels[0].index)
+            elif e.key == pygame.K_PAGEUP:
+                self.select(self.index - 10)
+            elif e.key == pygame.K_PAGEDOWN:
+                self.select(self.index + 10)
+            elif e.key == pygame.K_HOME:
+                self.select(0)
+            elif e.key == pygame.K_END:
+                self.select(n - 1)
             elif e.key in OK_KEYS:
                 self.play_selected()
+        elif e.type == pygame.MOUSEWHEEL:
+            self.scroll_to(self.target - e.y * self.ROW_H * 3)
         elif e.type == pygame.MOUSEMOTION:
-            for kind, obj, y in self.rows:
-                if kind == "level" and self._row_rect(y).collidepoint(e.pos) and obj.index != self.index:
-                    self.index = obj.index
-                    g.sound.play("menu_move")
+            if self.dragging:
+                self._drag_to(e.pos[1])
+                return
+            lv = self.level_at(e.pos)
+            if lv is not None and lv.index != self.index:
+                self.index = lv.index
+                g.sound.play("menu_move")
         elif e.type == pygame.MOUSEBUTTONDOWN and e.button == 1:
-            for kind, obj, y in self.rows:
-                if kind == "level" and self._row_rect(y).collidepoint(e.pos):
-                    self.index = obj.index
-                    self.play_selected()
+            if self.BAR.inflate(10, 0).collidepoint(e.pos) and self.max_scroll > 0:
+                self.dragging = True
+                self._drag_to(e.pos[1])
+                return
+            lv = self.level_at(e.pos)
+            if lv is not None:
+                self.index = lv.index
+                self.play_selected()
+        elif e.type == pygame.MOUSEBUTTONUP and e.button == 1:
+            self.dragging = False
 
     def update(self, dt):
         if self.message_t > 0:
             self.message_t -= dt
+        diff = self.target - self.scroll
+        if abs(diff) < 0.5:
+            self.scroll = self.target
+        else:
+            self.scroll += diff * min(1.0, dt / 70)
 
     def preview(self, lv):
         if lv.id in self.preview_cache:
             return self.preview_cache[lv.id]
         from .play import render_board_background, tile_sprite
         board = lv.make_board()
-        t = 16
+        t = next((t for t in (16, 12, 10, 8) if board.width * t <= 296 and board.height * t <= 156), 6)
         bg = render_board_background(self.game, board, t)
         for b in board.boxes:
             name = "box_done" if b in board.goals else "box"
@@ -547,9 +677,14 @@ class LevelSelectScene(Scene):
         ui.dither_overlay(surf, (0, 0, 20), 120)
         ui.dos_window(surf, f, (16, 16, 768, 568), "LEVEL SELECTEREN - DOSSIEROVERZICHT")
         save = g.save
+        surf.set_clip(self.VIEW)
+        top = int(self.scroll)
         for kind, obj, y in self.rows:
+            if y - top > self.VIEW.h or y - top < -self.DEPT_H:
+                continue
             if kind == "dept":
-                ui.text(surf, f, f"AFDELING {obj.id}: {obj.name.upper()}", (36, y + 2), "normal", S.YELLOW)
+                ui.text(surf, f, f"AFDELING {obj.id}: {obj.name.upper()}",
+                        (self.VIEW.x + 4, self.VIEW.y + y - top + 2), "normal", S.YELLOW)
                 continue
             lv = obj
             r = self._row_rect(y)
@@ -569,6 +704,19 @@ class LevelSelectScene(Scene):
             else:
                 status, scol = "IN BEHANDELING", (S.MID_GREY if not selected else S.DARK_GREY)
             ui.text(surf, f, status, (r.right - 8, r.y + 1), "small", scol, "right", shadow=sh)
+        surf.set_clip(None)
+        # thin line at an edge where more of the list is hidden
+        if self.scroll > 1:
+            pygame.draw.line(surf, S.LIGHT_BLUE, (self.VIEW.x + 4, self.VIEW.y), (self.VIEW.right - 4, self.VIEW.y))
+        if self.scroll < self.max_scroll - 1:
+            pygame.draw.line(surf, S.LIGHT_BLUE, (self.VIEW.x + 4, self.VIEW.bottom - 1),
+                             (self.VIEW.right - 4, self.VIEW.bottom - 1))
+        # scrollbar
+        pygame.draw.rect(surf, S.NAVY, self.BAR)
+        pygame.draw.rect(surf, S.MID_GREY, self.BAR, 1)
+        thumb = self.thumb_rect()
+        pygame.draw.rect(surf, S.YELLOW if self.dragging else S.LIGHT_BLUE, thumb)
+        pygame.draw.rect(surf, S.WHITE, thumb, 1)
         # right panel
         lv = self.levels[self.index]
         px = 456
@@ -603,16 +751,23 @@ class LevelSelectScene(Scene):
             for i, line in enumerate(["Dit dossier is nog niet vrijgegeven.",
                                       "Voltooi eerst het vorige dossier."]):
                 ui.text(surf, f, line, (px + 156, 260 + i * 20), "small", S.GREY, "center")
+        if save.unlock_all:
+            ui.text(surf, f, "GEHEIME MACHTIGING ACTIEF", (px + 156, 426), "small", S.YELLOW, "center")
         done = len(save.completed)
         total = len(self.levels)
         ui.text(surf, f, f"Voltooid: {done} van {total}", (px + 156, 450), "normal", S.YELLOW, "center")
         ui.progress_bar(surf, (px + 26, 474, 260, 22), done / total, fg=S.GREEN)
         foot = self.message if self.message_t > 0 else \
-            "Op/neer: dossier   Links/rechts: afdeling   ENTER: openen   ESC: terug"
-        ui.text(surf, f, foot, (400, 556), "small", S.RED if self.message_t > 0 else S.LIGHT_BLUE, "center")
+            "Op/neer: dossier  Links/rechts: afdeling  PgUp/PgDn: 10  Wiel: scrollen  ENTER: openen"
+        col = (S.YELLOW if self.message_ok else S.RED) if self.message_t > 0 else S.LIGHT_BLUE
+        ui.text(surf, f, foot, (400, 556), "small", col, "center")
 
 
 class DepartmentIntroScene(Scene):
+    def presence(self):
+        d = self.level.department
+        return (f"Afdeling {d.id}: {d.name}", "Meldt zich bij de balie")
+
     """Title card shown when entering a new afdeling."""
 
     def __init__(self, game, level, then: Callable[[], None]):

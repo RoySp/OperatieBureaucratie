@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import random
+import time
 from typing import Dict, List, Optional
 
 import pygame
@@ -121,6 +122,9 @@ class PlayScene(Scene):
         self.flash = 0.0
         self.rejected = 0.0   # AFGEWEZEN stamp after a restart
         self.void_tile = tile_sprite(game, "void", 32)
+        self.started = time.time()       # Discord "elapsed" timer for this level
+        self.last_step = -1e9            # game.time of the last walk step
+        self.last_push = -1e9            # game.time of the last push
 
     def on_enter(self):
         self.game.sound.play_music("music_game")
@@ -162,7 +166,9 @@ class PlayScene(Scene):
                     self.say(random.choice(S.MSG_WALL), "icon_warn")
             return
         self.player.move(old, self.board.player, direction)
+        self.last_step = g.time
         if res.pushed:
+            self.last_push = g.time
             self.boxes.move(res.box_from, res.box_to)
             g.sound.play("push")
             if res.box_on_goal:
@@ -207,6 +213,32 @@ class PlayScene(Scene):
         self.flash = 220
         self.rejected = 900
         self.say(random.choice(S.MSG_RESTART), "icon_clock")
+
+    # ------------------------------------------------------------- discord
+    @property
+    def presence_details(self) -> str:
+        return f"Dossier {self.level.id}: {self.level.name}"
+
+    def presence_progress(self) -> str:
+        b = self.board
+        return f"{len(b.boxes & b.goals)}/{len(b.goals)} gearchiveerd"
+
+    def activity(self) -> str:
+        """'pushing', 'walking' or 'thinking', based on the last few seconds."""
+        now = self.game.time
+        if now - self.last_push < S.DISCORD_PUSH_WINDOW:
+            return "pushing"
+        if now - self.last_step < S.DISCORD_WALK_WINDOW:
+            return "walking"
+        return "thinking"
+
+    def presence(self):
+        state = {
+            "pushing": "Duwt een dossier",
+            "walking": "Loopt door de gang",
+            "thinking": "Denkt na...",
+        }[self.activity()]
+        return (self.presence_details, f"{state} ({self.presence_progress()})", self.started)
 
     # -------------------------------------------------------------- events
     def handle_event(self, e):
@@ -352,6 +384,10 @@ class PlayScene(Scene):
 
 
 class PauseScene(Scene):
+    def presence(self):
+        return (self.play.presence_details, f"Koffiepauze ({self.play.presence_progress()})",
+                self.play.started)
+
     opaque = False
 
     def __init__(self, game, play: PlayScene):
@@ -393,6 +429,9 @@ class PauseScene(Scene):
 
 
 class VictoryScene(Scene):
+    def presence(self):
+        return (self.play.presence_details, "Dossier goedgekeurd!", self.play.started)
+
     """An official 'beschikking' with a big GOEDGEKEURD stamp."""
 
     opaque = False
@@ -519,6 +558,9 @@ class VictoryScene(Scene):
 
 
 class EndingScene(Scene):
+    def presence(self):
+        return ("Alle dossiers gearchiveerd", "Gepromoveerd!")
+
     LINES = [
         "De procedure is succesvol afgerond.",
         "",

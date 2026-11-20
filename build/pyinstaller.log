@@ -1,0 +1,72 @@
+192 INFO: PyInstaller: 6.22.3, contrib hooks: 2026.10
+193 INFO: Python: 3.12.2
+222 INFO: Platform: Windows-11-10.0.26300-SP0
+222 INFO: Python environment: C:\Users\Gebruiker\Documents\Claude\Sokoban\.venv
+227 INFO: Module search paths (PYTHONPATH):
+['C:\\Users\\Gebruiker\\Documents\\Claude\\Sokoban\\.venv\\Scripts\\pyinstaller.exe',
+ 'C:\\Users\\Gebruiker\\AppData\\Local\\Programs\\Python\\Python312\\python312.zip',
+ 'C:\\Users\\Gebruiker\\AppData\\Local\\Programs\\Python\\Python312\\DLLs',
+ 'C:\\Users\\Gebruiker\\AppData\\Local\\Programs\\Python\\Python312\\Lib',
+ 'C:\\Users\\Gebruiker\\AppData\\Local\\Programs\\Python\\Python312',
+ 'C:\\Users\\Gebruiker\\Documents\\Claude\\Sokoban\\.venv',
+ 'C:\\Users\\Gebruiker\\Documents\\Claude\\Sokoban\\.venv\\Lib\\site-packages',
+ 'C:\\Users\\Gebruiker\\Documents\\Claude\\Sokoban']
+pygame 2.6.1 (SDL 2.28.4, Python 3.12.2)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+667 INFO: Appending 'datas' from .spec
+672 INFO: checking Analysis
+676 INFO: Building because excludes changed
+676 INFO: Looking for Python shared library...
+676 INFO: Using Python shared library: C:\Users\Gebruiker\AppData\Local\Programs\Python\Python312\python312.dll
+676 INFO: Running Analysis Analysis-00.toc
+676 INFO: Target bytecode optimization level: 0
+676 INFO: Initializing module dependency graph...
+679 INFO: Initializing module graph hook caches...
+692 INFO: Analyzing modules for base_library.zip ...
+2005 INFO: Processing standard module hook 'hook-encodings.py' from 'C:\\Users\\Gebruiker\\Documents\\Claude\\Sokoban\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+2578 INFO: Processing standard module hook 'hook-math.py' from 'C:\\Users\\Gebruiker\\Documents\\Claude\\Sokoban\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+3281 INFO: Processing standard module hook 'hook-pickle.py' from 'C:\\Users\\Gebruiker\\Documents\\Claude\\Sokoban\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+3894 INFO: Processing standard module hook 'hook-heapq.py' from 'C:\\Users\\Gebruiker\\Documents\\Claude\\Sokoban\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+4225 INFO: Caching module dependency graph...
+4253 INFO: Analyzing C:\Users\Gebruiker\Documents\Claude\Sokoban\main.py
+4269 INFO: Processing standard module hook 'hook-pygame.py' from 'C:\\Users\\Gebruiker\\Documents\\Claude\\Sokoban\\.venv\\Lib\\site-packages\\pygame\\__pyinstaller'
+4372 INFO: Processing pre-safe-import-module hook 'hook-typing_extensions.py' from 'C:\\Users\\Gebruiker\\Documents\\Claude\\Sokoban\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
+4373 INFO: SetuptoolsInfo: initializing cached setuptools info...
+5433 INFO: Processing standard module hook 'hook-platform.py' from 'C:\\Users\\Gebruiker\\Documents\\Claude\\Sokoban\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+5578 INFO: Processing standard module hook 'hook-_ctypes.py' from 'C:\\Users\\Gebruiker\\Documents\\Claude\\Sokoban\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+5581 INFO: Processing module hooks (post-graph stage)...
+5586 INFO: Performing binary vs. data reclassification (70 entries)
+5608 INFO: Looking for ctypes DLLs
+5612 INFO: Analyzing run-time hooks ...
+5613 INFO: Including run-time hook 'pyi_rth_inspect.py' from 'C:\\Users\\Gebruiker\\Documents\\Claude\\Sokoban\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks'
+5618 INFO: Creating base_library.zip...
+5633 INFO: Looking for dynamic libraries
+pygame 2.6.1 (SDL 2.28.4, Python 3.12.2)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+5904 INFO: Extra DLL search directories (AddDllDirectory): ['C:\\Users\\Gebruiker\\Documents\\Claude\\Sokoban\\.venv\\Lib\\site-packages\\pygame']
+5904 INFO: Extra DLL search directories (PATH): []
+6465 INFO: Warnings written to C:\Users\Gebruiker\Documents\Claude\Sokoban\build\OperatieBureaucratie\warn-OperatieBureaucratie.txt
+6479 INFO: Graph cross-reference written to C:\Users\Gebruiker\Documents\Claude\Sokoban\build\OperatieBureaucratie\xref-OperatieBureaucratie.html
+6493 INFO: checking PYZ
+6501 INFO: Building because C:\Users\Gebruiker\Documents\Claude\Sokoban\game\level.py changed
+6501 INFO: Building PYZ (ZlibArchive) C:\Users\Gebruiker\Documents\Claude\Sokoban\build\OperatieBureaucratie\PYZ-00.pyz
+6615 INFO: Building PYZ (ZlibArchive) C:\Users\Gebruiker\Documents\Claude\Sokoban\build\OperatieBureaucratie\PYZ-00.pyz completed successfully.
+6626 INFO: checking PKG
+6626 INFO: Building because toc changed
+6626 INFO: Building PKG (CArchive) OperatieBureaucratie.pkg
+9268 INFO: Building PKG (CArchive) OperatieBureaucratie.pkg completed successfully.
+9271 INFO: Bootloader C:\Users\Gebruiker\Documents\Claude\Sokoban\.venv\Lib\site-packages\PyInstaller\bootloader\Windows-64bit-intel\runw.exe
+9271 INFO: checking EXE
+9272 INFO: Building because name changed
+9272 INFO: Building EXE from EXE-00.toc
+9274 INFO: Copying bootloader EXE to C:\Users\Gebruiker\Documents\Claude\Sokoban\dist\OperatieBureaucratie.exe
+9309 INFO: Copying icon to EXE
+9341 INFO: Copying version information to EXE
+9380 INFO: Copying 0 resources to EXE
+9380 INFO: Embedding manifest in EXE
+9612 INFO: Appending PKG archive to EXE
+9650 INFO: Fixing EXE headers
+10317 INFO: Building EXE from EXE-00.toc completed successfully.
+10319 INFO: Build complete! The results are available in: C:\Users\Gebruiker\Documents\Claude\Sokoban\dist
+pygame 2.6.1 (SDL 2.28.4, Python 3.12.2)
+Hello from the pygame community. https://www.pygame.org/contribute.html

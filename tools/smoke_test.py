@@ -56,6 +56,22 @@ key(g, pygame.K_RETURN)  # level select
 frame(g, 3)
 assert isinstance(g.top, menu.LevelSelectScene)
 shot(g, "03_levelselect")
+# Secret code opens every level and a second time locks them again
+ls = g.top
+start = ls.index
+code = menu.SECRET_CODE
+for k in code:
+    key(g, k)
+    frame(g, 2)
+assert g.save.unlock_all and ls.index == start
+assert all(g.levels.is_unlocked(lv, g.save) for lv in g.levels.levels)
+frame(g, 40)
+shot(g, "03_levelselect_unlocked")
+for k in code[:5] + (pygame.K_UP,) + code:   # a wrong key in between restarts the code
+    key(g, k)
+frame(g, 2)
+assert not g.save.unlock_all
+assert [g.levels.is_unlocked(lv, g.save) for lv in g.levels.levels[:2]] == [True, False]
 key(g, pygame.K_ESCAPE)
 key(g, pygame.K_DOWN)
 key(g, pygame.K_RETURN)  # options
@@ -95,6 +111,31 @@ for idx, lv in enumerate(g.levels.levels):
     frame(g, 60)
     assert g.save.is_completed(lv.id)
 
+# Level select scrolls through all levels and keeps the selection visible
+ls = menu.LevelSelectScene(g)
+g.reset_to(ls)
+assert ls.max_scroll > 0
+key(g, pygame.K_HOME)
+frame(g, 40)
+assert ls.index == 0 and ls.scroll == 0
+shot(g, "03_levelselect_top")
+for _ in range(37):
+    key(g, pygame.K_DOWN)
+    frame(g, 3)
+frame(g, 40)
+assert ls.VIEW.contains(ls._row_rect(ls.level_y[ls.index])), "selectie buiten beeld"
+shot(g, "03_levelselect_middle")
+key(g, pygame.K_END)
+frame(g, 40)
+assert ls.index == len(g.levels.levels) - 1 and abs(ls.scroll - ls.max_scroll) < 1
+assert ls.VIEW.contains(ls._row_rect(ls.level_y[ls.index]))
+shot(g, "03_levelselect_bottom")
+ls.handle_event(pygame.event.Event(pygame.MOUSEWHEEL, x=0, y=5, flipped=False))
+frame(g, 40)
+assert ls.scroll < ls.max_scroll
+key(g, pygame.K_PAGEUP)
+assert ls.index == len(g.levels.levels) - 11
+
 # Pause menu on a level
 play.start_level(g, g.levels.levels[3], show_intro=False)
 scene = g.top
@@ -115,6 +156,36 @@ frame(g, 3)
 assert isinstance(g.top, play.PauseScene)
 shot(g, "09_pause")
 key(g, pygame.K_ESCAPE)
+
+# Discord statuses reported by the real scenes
+def status():
+    act = g.presence_activity()
+    return act["details"], act["state"]
+
+g.reset_to(menu.TitleScene(g))
+frame(g, 2)
+assert status()[0] == "In het hoofdmenu", status()
+g.push(menu.OptionsScene(g))
+assert "INST-7" in status()[1], status()
+g.pop()
+lv = g.levels.by_id("3-4")
+play.start_level(g, lv, show_intro=False)
+scene = g.top
+frame(g, 2)
+assert status() == ("Dossier 3-4: " + lv.name, "Denkt na... (0/5 gearchiveerd)"), status()
+seq = SOLUTIONS["3-4"]
+scene.try_move(LETTER_DIRS[seq[0]])          # first move of 3-4 is a push
+frame(g, 1)
+assert status()[1].startswith("Duwt een dossier"), status()
+frame(g, 200, dt=16)                         # ~3 s idle
+assert status()[1].startswith("Denkt na"), status()
+scene.try_move(LETTER_DIRS["l"])             # step back left (no push)
+frame(g, 1)
+assert status()[1].startswith("Loopt door de gang"), status()
+key(g, pygame.K_ESCAPE)
+assert status()[1].startswith("Koffiepauze"), status()
+assert g.presence_activity()["timestamps"]["start"] == int(scene.started)
+print("Discord statuses OK:", status())
 
 g.reset_to(play.EndingScene(g))
 frame(g, 200)

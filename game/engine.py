@@ -3,12 +3,14 @@ from __future__ import annotations
 
 import random
 import sys
+import time
 import traceback
 from typing import List, Optional
 
 import pygame
 
 from . import settings as S
+from .discord_rpc import DiscordPresence
 from .level import LevelPack
 from .resources import resource_path, user_data_dir
 from .savegame import SaveGame
@@ -36,6 +38,13 @@ class Scene:
     def draw(self, surf: pygame.Surface):
         pass
 
+    def presence(self) -> Optional[tuple]:
+        """Discord status as (details, state[, start_timestamp]).
+
+        None means: use whatever the scene below this one shows.
+        """
+        return None
+
 
 class Game:
     def __init__(self):
@@ -57,12 +66,16 @@ class Game:
         self.fonts = Fonts()
         self.sprites = Sprites()
         self.levels = LevelPack()
+        self.save.upgrade(self.levels.legacy_map())
         self.sound = SoundManager(self.save.settings)
         self.scenes: List[Scene] = []
         self.running = True
         self.time = 0.0
         self._shake_time = 0.0
         self._shake_power = 0
+        self.started = int(time.time())
+        self.discord = DiscordPresence(
+            S.DISCORD_CLIENT_ID, enabled=lambda: self.save.settings.get("discord", True))
 
     # ------------------------------------------------------------- scenes
     def push(self, scene: Scene):
@@ -108,6 +121,27 @@ class Game:
         self.save.save()
         self.running = False
 
+    # ------------------------------------------------------------- discord
+    def presence_activity(self) -> Optional[dict]:
+        info = None
+        for scene in reversed(self.scenes):
+            info = scene.presence()
+            if info:
+                break
+        if not info:
+            return None
+        details, state = info[0], info[1]
+        start = info[2] if len(info) > 2 and info[2] else self.started
+        assets = {"large_text": f"{S.TITLE} - {S.SUBTITLE}"}
+        if S.DISCORD_LARGE_IMAGE:
+            assets["large_image"] = S.DISCORD_LARGE_IMAGE
+        return {
+            "details": details[:128],
+            "state": state[:128],
+            "timestamps": {"start": int(start)},
+            "assets": assets,
+        }
+
     # ------------------------------------------------------------- loop
     def run(self):
         from .menu import LoadingScene
@@ -129,6 +163,8 @@ class Game:
                 break
             self.top.update(dt)
             self._draw(dt)
+            self.discord.set(self.presence_activity())
+        self.discord.close()
         pygame.quit()
 
     def _draw(self, dt):

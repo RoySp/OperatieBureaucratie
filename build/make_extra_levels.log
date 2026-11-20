@@ -1,0 +1,111 @@
+280 kandidaten genereren...
+  10/280  bruikbaar: 199  (218s)
+  20/280  bruikbaar: 202  (218s)
+  30/280  bruikbaar: 208  (220s)
+  40/280  bruikbaar: 214  (220s)
+  50/280  bruikbaar: 219  (257s)
+  60/280  bruikbaar: 224  (257s)
+  70/280  bruikbaar: 232  (331s)
+  80/280  bruikbaar: 236  (332s)
+  90/280  bruikbaar: 241  (385s)
+  100/280  bruikbaar: 246  (398s)
+  110/280  bruikbaar: 251  (440s)
+  120/280  bruikbaar: 257  (552s)
+  130/280  bruikbaar: 262  (552s)
+  140/280  bruikbaar: 266  (590s)
+  150/280  bruikbaar: 273  (590s)
+  160/280  bruikbaar: 280  (632s)
+  170/280  bruikbaar: 287  (635s)
+  180/280  bruikbaar: 292  (635s)
+  190/280  bruikbaar: 301  (635s)
+  200/280  bruikbaar: 304  (690s)
+  210/280  bruikbaar: 307  (758s)
+  220/280  bruikbaar: 314  (817s)
+  230/280  bruikbaar: 318  (837s)
+  240/280  bruikbaar: 324  (867s)
+  250/280  bruikbaar: 331  (867s)
+  260/280  bruikbaar: 335  (908s)
+  270/280  bruikbaar: 341  (929s)
+  280/280  bruikbaar: 346  (937s)
+Pool: 250 bruikbare kandidaten (moeilijkheid >= 33)
+6-1    Bezwaarschrift                           dossiers=4 duwen= 31 zetten= 196 grootte=14x11 seed=600005
+6-2    Termijn verstreken                       dossiers=4 duwen= 31 zetten= 287 grootte=17x11 seed=800016
+6-3    Hoorzitting                              dossiers=5 duwen= 29 zetten= 124 grootte=17x14 seed=900010
+6-4    Pro forma                                dossiers=5 duwen= 29 zetten= 175 grootte=14x11 seed=900068
+6-5    Ingebrekestelling                        dossiers=4 duwen= 31 zetten= 279 grootte=17x11 seed=1100161
+6-6    Gegrond verklaard                        dossiers=4 duwen= 32 zetten=  92 grootte=17x11 seed=700050
+6-7    Ongegrond verklaard                      dossiers=5 duwen= 30 zetten= 189 grootte=14x11 seed=900020
+6-8    Niet-ontvankelijk                        dossiers=4 duwen= 32 zetten= 117 grootte=17x11 seed=1100013
+6-9    Herziening                               dossiers=4 duwen= 32 zetten= 183 grootte=17x11 seed=1100205
+6-10   Voorlopige voorziening                   dossiers=3 duwen= 35 zetten= 120 grootte=14x11 seed=600058
+6-11   Commissie van Advies                     dossiers=4 duwen= 33 zetten= 159 grootte=17x11 seed=1100159
+6-12   Dwangsom                                 dossiers=3 duwen= 36 zetten= 128 grootte=14x11 seed=600064
+6-13   Beroep in tweede aanleg                  dossiers=5 duwen= 32 zetten= 200 grootte=17x11 seed=900024
+6-14   Raad van Advies                          dossiers=4 duwen= 34 zetten= 142 grootte=17x11 seed=1100067
+6-15   Wraking                                  dossiers=4 duwen= 34 zetten= 122 grootte=17x11 seed=1100151
+6-16   Onherroepelijk                           dossiers=3 duwen= 37 zetten= 124 grootte=14x11 seed=600034
+7-1    Formulier A1                             dossiers=4 duwen= 35 zetten= 144 grootte=14x11 seed=1100080
+7-2    Doorhalen wat niet van toepassing is     dossiers=4 duwen= 35 zetten= 121 grootte=17x11 seed=1100127
+7-3    In blokletters                           dossiers=3 duwen= 38 zetten= 127 grootte=14x8 seed=600000
+7-4    Bijlage 3 van 7                          dossiers=4 duwen= 36 zetten= 174 grootte=17x11 seed=700008
+7-5    Handtekening hier                        dossiers=5 duwen= 34 zetten= 169 grootte=17x14 seed=1100030
+7-6    Doorslag in drievoud                     dossiers=4 duwen= 36 zetten= 195 grootte=14x11 seed=1100212
+7-7    Toelichting op de toelichting            dossiers=4 duwen= 37 zetten= 161 grootte=14x11 seed=700024
+7-8    Het kopje 'Overig'                       dossiers=5 duwen= 35 zetten= 161 grootte=17x14 seed=1100110
+7-9    Verplicht veld                           dossiers=4 duwen= 38 zetten= 130 grootte=14x11 seed=700033
+7-10   Digitaal invullen, op papier inleveren   dossiers=4 duwen= 38 zetten= 157 grootte=17x11 seed=1100103
+7-11   Formulier 12C                            dossiers=4 duwen= 39 zetten= 194 grootte=14x11 seed=600041
+7-12   Paginanummering                          dossiers=4 duwen= 39 zetten= 162 grootte=14x11 seed=700060
+7-13   Kladversie                               dossiers=4 duwen= 39 zetten= 118 grootte=14x11 seed=1100012
+7-14   Nietmachine                              dossiers=4 duwen= 39 zetten= 244 grootte=14x11 seed=1100256
+7-15   Ontvangstbevestiging                     dossiers=5 duwen= 38 zetten= 310 grootte=17x11 seed=800035
+7-16   Het Moederformulier                      dossiers=4 duwen= 40 zetten= 197 grootte=17x11 seed=1100039
+8-1    Eerste stempel                           dossiers=4 duwen= 40 zetten= 232 grootte=17x11 seed=1100213
+8-2    Natte inkt                               dossiers=5 duwen= 39 zetten= 205 grootte=17x11 seed=800062
+8-3    Datumstempel                             dossiers=4 duwen= 41 zetten= 197 grootte=14x11 seed=1100076
+8-4    Gezien                                   dossiers=4 duwen= 41 zetten= 243 grootte=14x11 seed=1100264
+8-5    Voor akkoord                             dossiers=4 duwen= 42 zetten= 338 grootte=14x11 seed=700022
+8-6    Stempelkussen leeg                       dossiers=4 duwen= 42 zetten= 236 grootte=14x11 seed=1100032
+8-7    Scheef gestempeld                        dossiers=4 duwen= 42 zetten= 188 grootte=17x11 seed=1100143
+8-8    Kopie conform origineel                  dossiers=4 duwen= 42 zetten= 124 grootte=14x11 seed=1100236
+8-9    Stempelcarrousel                         dossiers=5 duwen= 41 zetten= 201 grootte=14x11 seed=900035
+8-10   Spoedstempel                             dossiers=4 duwen= 43 zetten= 128 grootte=17x11 seed=1100155
+8-11   Geheim                                   dossiers=4 duwen= 43 zetten= 181 grootte=17x11 seed=1100187
+8-12   Gewaarmerkt                              dossiers=4 duwen= 44 zetten= 163 grootte=17x11 seed=700038
+8-13   Dubbel gestempeld                        dossiers=4 duwen= 44 zetten= 129 grootte=14x11 seed=1100244
+8-14   Het Stempelarchief                       dossiers=5 duwen= 43 zetten= 241 grootte=17x14 seed=900001
+8-15   Stempelkamer B                           dossiers=4 duwen= 45 zetten= 291 grootte=17x11 seed=1100007
+8-16   De Gouden Stempel                        dossiers=4 duwen= 46 zetten= 150 grootte=14x11 seed=700012
+9-1    Nummertje 1                              dossiers=6 duwen= 42 zetten= 252 grootte=17x11 seed=1000026
+9-2    Nummertje 412                            dossiers=4 duwen= 47 zetten= 199 grootte=14x11 seed=600062
+9-3    Wachtkamer                               dossiers=4 duwen= 47 zetten= 196 grootte=17x11 seed=1100111
+9-4    Pauzescherm                              dossiers=4 duwen= 47 zetten= 152 grootte=14x11 seed=1100164
+9-5    Spreekuur                                dossiers=5 duwen= 46 zetten= 175 grootte=17x14 seed=1100186
+9-6    Terugbelverzoek                          dossiers=4 duwen= 49 zetten= 249 grootte=14x11 seed=700030
+9-7    Muziek in de wacht                       dossiers=6 duwen= 45 zetten= 138 grootte=17x11 seed=1000046
+9-8    Wachtrij voor de wachtrij                dossiers=4 duwen= 50 zetten= 194 grootte=14x11 seed=700001
+9-9    Verkeerde balie                          dossiers=4 duwen= 51 zetten= 204 grootte=14x11 seed=700051
+9-10   Afspraak verzet                          dossiers=4 duwen= 51 zetten= 206 grootte=17x11 seed=1100259
+9-11   Loket gesloten                           dossiers=5 duwen= 50 zetten= 247 grootte=17x11 seed=900003
+9-12   Zelfbedieningszuil                       dossiers=4 duwen= 52 zetten= 202 grootte=14x11 seed=1100208
+9-13   Rij 7, stoel 3                           dossiers=5 duwen= 51 zetten= 270 grootte=17x11 seed=800020
+9-14   De lange gang                            dossiers=4 duwen= 53 zetten= 260 grootte=17x11 seed=1100109
+9-15   Bijna aan de beurt                       dossiers=5 duwen= 51 zetten= 253 grootte=17x14 seed=1100246
+9-16   Nummertje 999                            dossiers=5 duwen= 52 zetten= 246 grootte=14x11 seed=900029
+10-1   Ambtelijk vooroverleg                    dossiers=4 duwen= 54 zetten= 149 grootte=17x11 seed=1100031
+10-2   Kamerbrief                               dossiers=4 duwen= 55 zetten= 236 grootte=17x11 seed=700032
+10-3   Coalitieakkoord                          dossiers=4 duwen= 56 zetten= 265 grootte=14x11 seed=700039
+10-4   Nota van Wijziging                       dossiers=4 duwen= 56 zetten= 261 grootte=17x11 seed=1100267
+10-5   Interdepartementaal                      dossiers=5 duwen= 55 zetten= 295 grootte=17x14 seed=1000013
+10-6   Begroting                                dossiers=5 duwen= 55 zetten= 274 grootte=17x14 seed=1100158
+10-7   Motie aangenomen                         dossiers=4 duwen= 58 zetten= 227 grootte=14x11 seed=1100128
+10-8   Reorganisatie                            dossiers=4 duwen= 60 zetten= 184 grootte=17x11 seed=1100231
+10-9   Staatssecretaris                         dossiers=4 duwen= 62 zetten= 278 grootte=14x11 seed=1100124
+10-10  Ministerraad                             dossiers=4 duwen= 64 zetten= 339 grootte=17x11 seed=1100257
+10-11  Parlementaire enquête                    dossiers=4 duwen= 66 zetten= 224 grootte=17x11 seed=1100135
+10-12  Regeerakkoord                            dossiers=4 duwen= 67 zetten= 281 grootte=17x11 seed=700068
+10-13  Archiefwet                               dossiers=4 duwen= 69 zetten= 276 grootte=17x11 seed=800004
+10-14  Kabinetsformatie                         dossiers=4 duwen= 73 zetten= 319 grootte=14x11 seed=600059
+10-15  De Hoogste Ambtenaar                     dossiers=4 duwen= 76 zetten= 431 grootte=17x11 seed=1100089
+10-16  Het Juiste Loket                         dossiers=4 duwen= 93 zetten= 363 grootte=14x11 seed=1100276
+Geschreven: 100 levels

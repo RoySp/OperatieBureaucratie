@@ -337,6 +337,1687 @@
           ]
         }
       ]
+    },
+    {
+      "id": 6,
+      "name": "Bezwaar en Beroep",
+      "motto": "U kunt binnen zes weken bezwaar maken tegen dit motto.",
+      "levels": [
+        {
+          "id": "6-1",
+          "name": "Bezwaarschrift",
+          "note": "Uw bezwaar is ontvangen. Het bezwaar tegen uw bezwaar ook.",
+          "map": [
+            "##############",
+            "#c #     #####",
+            "#  $ #   #####",
+            "#  $ #.  ###p#",
+            "#@$ $#.#######",
+            "###  ..#b#####",
+            "###  # b####r#",
+            "#   #  #######",
+            "# ##   #p#####",
+            "#     ##c#####",
+            "##############"
+          ],
+          "legacy_id": "6-1"
+        },
+        {
+          "id": "6-2",
+          "name": "Termijn verstreken",
+          "note": "U bent te laat. Gelukkig zijn wij dat ook.",
+          "map": [
+            "#################",
+            "######          #",
+            "#### $   # ## $b#",
+            "####.   ##   # ##",
+            "########## .$@$ #",
+            "#b # p #   ###  #",
+            "#r         #### #",
+            "#  ### ###  #   #",
+            "#  ###        ###",
+            "#a     .  #.  ###",
+            "#################"
+          ],
+          "legacy_id": "6-2"
+        },
+        {
+          "id": "6-3",
+          "name": "Hoorzitting",
+          "note": "U wordt gehoord. Luisteren is een aparte procedure.",
+          "map": [
+            "#################",
+            "#a######     ####",
+            "#### kk#  # *####",
+            "#### b### #######",
+            "#p   ##       ###",
+            "# $ $@#       ###",
+            "##.# $## ####  ##",
+            "#r  #    ###   ##",
+            "#   #.    #    .#",
+            "##.##  #     # c#",
+            "#  ##  ##  #   a#",
+            "# c## $## k# p###",
+            "#c###         ###",
+            "#################"
+          ],
+          "legacy_id": "6-3"
+        },
+        {
+          "id": "6-4",
+          "name": "Pro forma",
+          "note": "Alles is voorlopig. Behalve deze dossiers.",
+          "map": [
+            "##############",
+            "##    ########",
+            "##$$ * ####p #",
+            "##  #  @.    #",
+            "#   ## # $## #",
+            "#  ###$#  #. #",
+            "#  #  .#    p#",
+            "# .   ## b  k#",
+            "#      #### r#",
+            "##### r#######",
+            "##############"
+          ],
+          "legacy_id": "6-4"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Hoorcommissie",
+      "motto": "Wij horen u. Of wij luisteren is een andere procedure.",
+      "levels": [
+        {
+          "id": "7-1",
+          "name": "Ingebrekestelling",
+          "note": "Wij stellen onszelf in gebreke. Daarna gaan we lunchen.",
+          "map": [
+            "#################",
+            "#  ####    ###  #",
+            "#      $ # ###  #",
+            "#. # $$ ##   #p #",
+            "#..#  ##   r    #",
+            "#. # $## @##kp  #",
+            "#     ##  ####  #",
+            "#   ###   ##### #",
+            "## #       k### #",
+            "##     ##  kcrp #",
+            "#################"
+          ],
+          "legacy_id": "6-5"
+        },
+        {
+          "id": "7-2",
+          "name": "Gegrond verklaard",
+          "note": "U krijgt gelijk. Het dossier nog niet.",
+          "map": [
+            "#################",
+            "# p#c k  ##k   ##",
+            "#  #@           #",
+            "#  #####  #  #  #",
+            "# c##### #      #",
+            "#    ## ...  a#c#",
+            "##  $    .   ra##",
+            "## $         ####",
+            "## $    $ # #####",
+            "##  #  ####  k###",
+            "#################"
+          ],
+          "legacy_id": "6-6"
+        },
+        {
+          "id": "7-3",
+          "name": "Ongegrond verklaard",
+          "note": "U krijgt ongelijk, maar wel netjes geordend.",
+          "map": [
+            "##############",
+            "##  .  $ ##  #",
+            "##  $##  b# $#",
+            "####  ##  #  #",
+            "## $ $#   #  #",
+            "#.      ###  #",
+            "#  ##  k### .#",
+            "# .    #    ##",
+            "#   .##   @ ##",
+            "####     #####",
+            "##############"
+          ],
+          "legacy_id": "6-7"
+        },
+        {
+          "id": "7-4",
+          "name": "Niet-ontvankelijk",
+          "note": "Uw dossier is niet ontvangen. Het staat in de gang.",
+          "map": [
+            "#################",
+            "##########     p#",
+            "#####@ ap    a# #",
+            "####     .###   #",
+            "#  $$ # ######c #",
+            "#       #####   #",
+            "#####  .      . #",
+            "#####  ##$  .## #",
+            "#####$ #   #    #",
+            "#####           #",
+            "#################"
+          ],
+          "legacy_id": "6-8"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Juridische Zaken",
+      "motto": "Alles is juridisch correct. Niets is duidelijk.",
+      "levels": [
+        {
+          "id": "8-1",
+          "name": "Herziening",
+          "note": "We kijken er nog één keer naar. En daarna nog eens.",
+          "map": [
+            "#################",
+            "###    ##########",
+            "### #  ####k  ###",
+            "#   ##          #",
+            "#a #   ## ####  #",
+            "#b # bp##$$  #ca#",
+            "#   ###@$    ####",
+            "#   ###$##  #c#b#",
+            "###    . #  #r#c#",
+            "###   ...   #####",
+            "#################"
+          ],
+          "legacy_id": "6-9"
+        },
+        {
+          "id": "8-2",
+          "name": "Voorlopige voorziening",
+          "note": "Tijdelijk geregeld, voor onbepaalde tijd.",
+          "map": [
+            "##############",
+            "##    #     ##",
+            "## $  #   #$##",
+            "###   # ###  #",
+            "#### # .### r#",
+            "# @#$  .b## b#",
+            "#    # . b#  #",
+            "#            #",
+            "#p  ##     ###",
+            "#      ##rr###",
+            "##############"
+          ],
+          "legacy_id": "6-10"
+        },
+        {
+          "id": "8-3",
+          "name": "Commissie van Advies",
+          "note": "De commissie adviseert een commissie op te richten.",
+          "map": [
+            "#################",
+            "# . $ ###    rp #",
+            "#  $@$ ##b #    #",
+            "# ###        ##k#",
+            "#        # # pa##",
+            "# # #c   #   .###",
+            "#   ###  # #  k##",
+            "# .####    c p###",
+            "# $##### #.#  ###",
+            "#  #####      ###",
+            "#################"
+          ],
+          "legacy_id": "6-11"
+        },
+        {
+          "id": "8-4",
+          "name": "Dwangsom",
+          "note": "Elke dag te laat kost geld. Wij rekenen in stempels.",
+          "map": [
+            "##############",
+            "####      ####",
+            "# $ $   #    #",
+            "# $ ### #    #",
+            "#.. #   #    #",
+            "#.#       # ##",
+            "# #   # #    #",
+            "#   @    ##  #",
+            "#   a#b  ##c #",
+            "####    c#####",
+            "##############"
+          ],
+          "legacy_id": "6-12"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Hoger Beroep",
+      "motto": "Hoe hoger het beroep, hoe langer de trap.",
+      "levels": [
+        {
+          "id": "9-1",
+          "name": "Beroep in tweede aanleg",
+          "note": "De eerste aanleg was ook al zwaar.",
+          "map": [
+            "#################",
+            "######  ##     ##",
+            "###r##$  #  #$ ##",
+            "###c##  .   #  ##",
+            "### $  #.### $ ##",
+            "#   #   ..     ##",
+            "#r  ###  .   $###",
+            "###  #####  #@ka#",
+            "###   #  #  ##c##",
+            "###        r#####",
+            "#################"
+          ],
+          "legacy_id": "6-13"
+        },
+        {
+          "id": "9-2",
+          "name": "Raad van Advies",
+          "note": "Een raad die adviseert over raad. Of andersom.",
+          "map": [
+            "#################",
+            "##  r#          #",
+            "##r     # $   $ #",
+            "###a # p# #  ####",
+            "##c  ac    # ####",
+            "#p    # # $ $ @ #",
+            "#     #   c#    #",
+            "#   ###b  #  ...#",
+            "#   #p   ##  .# #",
+            "#rp##  a###   b #",
+            "#################"
+          ],
+          "legacy_id": "6-14"
+        },
+        {
+          "id": "9-3",
+          "name": "Wraking",
+          "note": "De ambtenaar is partijdig: houdt van rechte stapels.",
+          "map": [
+            "#################",
+            "#k          #   #",
+            "# #.  #c #  $ $ #",
+            "#     ####  #   #",
+            "#     ####  # ###",
+            "# $ # #   . #$  #",
+            "#   .    .      #",
+            "#r##   @   c    #",
+            "#p   #  a#p#  p #",
+            "#    #   #   ####",
+            "#################"
+          ],
+          "legacy_id": "6-15"
+        },
+        {
+          "id": "9-4",
+          "name": "Onherroepelijk",
+          "note": "Na dit dossier is er geen weg terug. Behalve de Z-toets.",
+          "map": [
+            "##############",
+            "###   #rc#####",
+            "#rp  .   #  ##",
+            "#   #    #   #",
+            "#            #",
+            "#      #r #@ #",
+            "#  b####  ## #",
+            "#  # $     # #",
+            "#.     $# $# #",
+            "#    .       #",
+            "##############"
+          ],
+          "legacy_id": "6-16"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Dienst Formulierbeheer",
+      "motto": "Voor elk formulier bestaat een formulier.",
+      "levels": [
+        {
+          "id": "10-1",
+          "name": "Formulier A1",
+          "note": "Het begint simpel. Dat zeggen ze altijd.",
+          "map": [
+            "##############",
+            "#ak##  ###   #",
+            "#pp## $#  .  #",
+            "#   #      ###",
+            "# # #   b ####",
+            "#      ##    #",
+            "# # #     $$ #",
+            "#     @     ##",
+            "#k  .b##.  $##",
+            "####. ###   ##",
+            "##############"
+          ],
+          "legacy_id": "7-1"
+        },
+        {
+          "id": "10-2",
+          "name": "Doorhalen wat niet van toepassing is",
+          "note": "Alles is van toepassing.",
+          "map": [
+            "#################",
+            "#   ###  #   ####",
+            "# $$       c ####",
+            "# $    #  b###ab#",
+            "#      #    #   #",
+            "# ###  ....    ##",
+            "# ######  b  @ ##",
+            "# $       #  #a##",
+            "#p####k   #  ####",
+            "##p#k######  ####",
+            "#################"
+          ],
+          "legacy_id": "7-2"
+        },
+        {
+          "id": "10-3",
+          "name": "In blokletters",
+          "note": "SCHRIJF DUIDELIJK. DUW ZORGVULDIG.",
+          "map": [
+            "##############",
+            "#   ####    .#",
+            "# #  $ #$.   #",
+            "#      #@  ###",
+            "#  ##   $. ###",
+            "#k     ##  ###",
+            "#   #  ##a ###",
+            "##############"
+          ],
+          "legacy_id": "7-3"
+        },
+        {
+          "id": "10-4",
+          "name": "Bijlage 3 van 7",
+          "note": "Bijlagen 1, 2 en 4 tot en met 7 volgen later.",
+          "map": [
+            "#################",
+            "###             #",
+            "#   r# @####  $ #",
+            "#p  .#  ##   ####",
+            "#b #           ##",
+            "#     ## # # $  #",
+            "# b#  ##   # #. #",
+            "#  .   #  .   $ #",
+            "#      #    #$# #",
+            "# c      cc #   #",
+            "#################"
+          ],
+          "legacy_id": "7-4"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Afdeling Bijlagen",
+      "motto": "Zie bijlage. Bijlage volgt.",
+      "levels": [
+        {
+          "id": "11-1",
+          "name": "Handtekening hier",
+          "note": "En hier. En hier. Paraferen op elke pagina.",
+          "map": [
+            "#################",
+            "######## b k   ##",
+            "#####@ #      b##",
+            "#    $$## ###   #",
+            "# ## .          #",
+            "#  ###$    # #. #",
+            "# $###  ## # #  #",
+            "##.##        a a#",
+            "#  *#  # ###   ##",
+            "#   ##   ###  ###",
+            "###   ######    #",
+            "#    k#bp ## ## #",
+            "#    ##.        #",
+            "#################"
+          ],
+          "legacy_id": "7-5"
+        },
+        {
+          "id": "11-2",
+          "name": "Doorslag in drievoud",
+          "note": "Wit voor ons, geel voor u, roze voor niemand.",
+          "map": [
+            "##############",
+            "#####b  r#####",
+            "#######  a##c#",
+            "########  ####",
+            "#######  #ar##",
+            "###         ##",
+            "###$   #     #",
+            "## $$### #   #",
+            "#   $ #.. ## #",
+            "#  @   ..    #",
+            "##############"
+          ],
+          "legacy_id": "7-6"
+        },
+        {
+          "id": "11-3",
+          "name": "Toelichting op de toelichting",
+          "note": "Zie pagina 14 van de toelichting.",
+          "map": [
+            "##############",
+            "#    #  #    #",
+            "# $$ #k      #",
+            "#  #   .###  #",
+            "##$   #  #####",
+            "##       ##k #",
+            "##$ #    #k  #",
+            "#     .    # #",
+            "#p.## # ## # #",
+            "##### .    @ #",
+            "##############"
+          ],
+          "legacy_id": "7-7"
+        },
+        {
+          "id": "11-4",
+          "name": "Het kopje 'Overig'",
+          "note": "Hier past werkelijk alles in. Behalve dit.",
+          "map": [
+            "#################",
+            "###  ##     #####",
+            "###  ## c  r#####",
+            "#     .###  k  k#",
+            "#   #*.#r       #",
+            "#a###..#  k##  ##",
+            "# ## $ ##    ####",
+            "#         ##  c##",
+            "#    # # ### ####",
+            "#  ###   @   ####",
+            "##  ## #  #$ ####",
+            "##$        $ ####",
+            "##       #  #####",
+            "#################"
+          ],
+          "legacy_id": "7-8"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Bureau Handtekeningen",
+      "motto": "Paraaf hier, hier en hier.",
+      "levels": [
+        {
+          "id": "12-1",
+          "name": "Verplicht veld",
+          "note": "Dit veld mag niet leeg blijven. Deze archiefplek ook niet.",
+          "map": [
+            "##############",
+            "#    .###@  ##",
+            "#   # ## $$ ##",
+            "#  #      $ ##",
+            "#  #     #####",
+            "#  #.##  ##c #",
+            "#            #",
+            "# #       #  #",
+            "#.  # #.# #$ #",
+            "### bk   k#  #",
+            "##############"
+          ],
+          "legacy_id": "7-9"
+        },
+        {
+          "id": "12-2",
+          "name": "Digitaal invullen, op papier inleveren",
+          "note": "Modernisering in uitvoering.",
+          "map": [
+            "#################",
+            "#######  ########",
+            "#### $      $ ###",
+            "# $      #    ###",
+            "# $##  @    b####",
+            "#  ##  ##   ###k#",
+            "# ##   .... #####",
+            "#    ####k ######",
+            "#     ##    ra###",
+            "#    b##   ######",
+            "#################"
+          ],
+          "legacy_id": "7-10"
+        },
+        {
+          "id": "12-3",
+          "name": "Formulier 12C",
+          "note": "Formulier 12B is gevonden. Nu 12C nog.",
+          "map": [
+            "##############",
+            "##  # k.    ##",
+            "##r.   ##   ##",
+            "###   # .   ##",
+            "####       ###",
+            "####     @ ###",
+            "#### . #     #",
+            "####p###$$$$ #",
+            "#######    ###",
+            "#####r#    ###",
+            "##############"
+          ],
+          "legacy_id": "7-11"
+        },
+        {
+          "id": "12-4",
+          "name": "Paginanummering",
+          "note": "Pagina 3 van 2.",
+          "map": [
+            "##############",
+            "####  #    ###",
+            "#b##     #$ ##",
+            "#r#ckk#  #@$ #",
+            "######## $ $ #",
+            "##c#   #  #  #",
+            "####    . ## #",
+            "##c#   #..   #",
+            "#pc#  c#.    #",
+            "####  ##     #",
+            "##############"
+          ],
+          "legacy_id": "7-12"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "name": "Afdeling Concepten",
+      "motto": "Alles is een concept. Ook deze afdeling.",
+      "levels": [
+        {
+          "id": "13-1",
+          "name": "Kladversie",
+          "note": "Dit is een concept. Het blijft een concept.",
+          "map": [
+            "##############",
+            "#ppcc #  #####",
+            "#    .#  #####",
+            "####p.  k#  @#",
+            "#  #..  c    #",
+            "#    #  ## # #",
+            "#b         $ #",
+            "#  #      #$ #",
+            "#  #   p#$ $ #",
+            "# p###  #   ##",
+            "##############"
+          ],
+          "legacy_id": "7-13"
+        },
+        {
+          "id": "13-2",
+          "name": "Nietmachine",
+          "note": "Alles moet aan elkaar vast. Behalve de nietjes.",
+          "map": [
+            "##############",
+            "#### @   #  ##",
+            "##r#    $  c##",
+            "##k#   #$  ###",
+            "##a    $   $ #",
+            "##      ###  #",
+            "### ##  #### #",
+            "##r....  #   #",
+            "######   # ###",
+            "######     ###",
+            "##############"
+          ],
+          "legacy_id": "7-14"
+        },
+        {
+          "id": "13-3",
+          "name": "Ontvangstbevestiging",
+          "note": "Wij bevestigen dat wij dit bevestigen.",
+          "map": [
+            "#################",
+            "######      #####",
+            "######$    .#####",
+            "###### ### ######",
+            "### $     .  # c#",
+            "##  #$##      .r#",
+            "##   .######    #",
+            "##  $#####   #  #",
+            "###$ ##      #@k#",
+            "###     . #### r#",
+            "#################"
+          ],
+          "legacy_id": "7-15"
+        },
+        {
+          "id": "13-4",
+          "name": "Het Moederformulier",
+          "note": "Het formulier waar alle formulieren uit voortkomen.",
+          "map": [
+            "#################",
+            "###k#####c  ak#r#",
+            "###p##b#..    # #",
+            "###r    . ##    #",
+            "#       .     # #",
+            "# ## # ##  #    #",
+            "# ##          ###",
+            "# #    ## $ $$###",
+            "#b# # ##  $#   ##",
+            "##a @ ##c  #   ##",
+            "#################"
+          ],
+          "legacy_id": "7-16"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Directie Stempelzaken",
+      "motto": "Zonder stempel bestaat het niet.",
+      "levels": [
+        {
+          "id": "14-1",
+          "name": "Eerste stempel",
+          "note": "Inkt erop, stempel erop, dossier weg.",
+          "map": [
+            "#################",
+            "#######b      ###",
+            "#####       k  ##",
+            "#..    ###  #  ##",
+            "#..    #b      ##",
+            "## ##@     ##  ##",
+            "##  #  $ #    p #",
+            "### ###$$$ # ## #",
+            "### #    # #r   #",
+            "###    ###    p #",
+            "#################"
+          ],
+          "legacy_id": "8-1"
+        },
+        {
+          "id": "14-2",
+          "name": "Natte inkt",
+          "note": "Niet aanraken. Wel duwen.",
+          "map": [
+            "#################",
+            "###           ###",
+            "#  $  #       . #",
+            "# # ########  # #",
+            "#       . #     #",
+            "###.# $ $ $   # #",
+            "###$######  #. .#",
+            "###  @######### #",
+            "####  ########  #",
+            "####k ######## a#",
+            "#################"
+          ],
+          "legacy_id": "8-2"
+        },
+        {
+          "id": "14-3",
+          "name": "Datumstempel",
+          "note": "De datum is altijd gisteren.",
+          "map": [
+            "##############",
+            "##          r#",
+            "##$# #  #k  p#",
+            "# $ $ $ ######",
+            "#  #  .#######",
+            "#p #     .####",
+            "#   # #     ##",
+            "#        .  ##",
+            "#   @## ##  .#",
+            "####    ### a#",
+            "##############"
+          ],
+          "legacy_id": "8-3"
+        },
+        {
+          "id": "14-4",
+          "name": "Gezien",
+          "note": "Gezien is niet hetzelfde als goedgekeurd.",
+          "map": [
+            "##############",
+            "#         .b##",
+            "#    .##.   p#",
+            "#  #####    ##",
+            "# $#  ### ####",
+            "#  # $###  . #",
+            "# ##  #      #",
+            "# ## $$  #   #",
+            "# ## @   #   #",
+            "#     #  # rb#",
+            "##############"
+          ],
+          "legacy_id": "8-4"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "name": "Inktvoorziening",
+      "motto": "De inkt is op. De aanvraag voor nieuwe inkt ook.",
+      "levels": [
+        {
+          "id": "15-1",
+          "name": "Voor akkoord",
+          "note": "Akkoord gaat pas na akkoord.",
+          "map": [
+            "##############",
+            "#            #",
+            "# $ $## #    #",
+            "####@## ###. #",
+            "# $ $   ##  ##",
+            "# ## #   #  ##",
+            "# .  .      ##",
+            "##  ##k###  .#",
+            "## k###r#### #",
+            "##  ####kk##p#",
+            "##############"
+          ],
+          "legacy_id": "8-5"
+        },
+        {
+          "id": "15-2",
+          "name": "Stempelkussen leeg",
+          "note": "Inkt is besteld. Levertijd: zes tot acht weken.",
+          "map": [
+            "##############",
+            "##    #   ####",
+            "#a    .   #  #",
+            "#b ##..# ##  #",
+            "##    .#     #",
+            "##     #     #",
+            "###### #  $  #",
+            "###### ### $ #",
+            "#  ###   @$$ #",
+            "#         #  #",
+            "##############"
+          ],
+          "legacy_id": "8-6"
+        },
+        {
+          "id": "15-3",
+          "name": "Scheef gestempeld",
+          "note": "Ongeldig. Opnieuw beginnen. Grapje. Of niet.",
+          "map": [
+            "#################",
+            "##     #  p   p##",
+            "##$#  @# r## ##c#",
+            "#    ###..   ####",
+            "#       ..   #r##",
+            "# # #  ##   #####",
+            "# # #      ######",
+            "# $       ####a##",
+            "# $$ # # ########",
+            "#        r#a#####",
+            "#################"
+          ],
+          "legacy_id": "8-7"
+        },
+        {
+          "id": "15-4",
+          "name": "Kopie conform origineel",
+          "note": "Het origineel is zoek. De kopie is conform.",
+          "map": [
+            "##############",
+            "#  #  ###   ##",
+            "#@$    ##$# ##",
+            "##  #     $ ##",
+            "###       $ ##",
+            "### #   ##  ##",
+            "##r ##     a##",
+            "##   .  a#####",
+            "##   .   #####",
+            "##  .. p #####",
+            "##############"
+          ],
+          "legacy_id": "8-8"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "name": "Afdeling Waarmerken",
+      "motto": "Echt is pas echt als het gewaarmerkt is.",
+      "levels": [
+        {
+          "id": "16-1",
+          "name": "Stempelcarrousel",
+          "note": "Draai, kies, stempel. Herhaal.",
+          "map": [
+            "##############",
+            "###  #  #  ###",
+            "###  $$ $  ###",
+            "### $#  # .  #",
+            "####      .rk#",
+            "#####     .# #",
+            "######$###.. #",
+            "##r#  @#    ##",
+            "###r ###    a#",
+            "####c###  #ac#",
+            "##############"
+          ],
+          "legacy_id": "8-9"
+        },
+        {
+          "id": "16-2",
+          "name": "Spoedstempel",
+          "note": "Spoed betekent: na de lunch.",
+          "map": [
+            "#################",
+            "#a#p #  c#pc ##k#",
+            "#bc#     #   #kb#",
+            "#### #  ##  k## #",
+            "#### b    @ ##  #",
+            "#r     #    ## a#",
+            "#      ##   ##  #",
+            "#  #            #",
+            "#  $ $ #### $##.#",
+            "#  ######## $...#",
+            "#################"
+          ],
+          "legacy_id": "8-10"
+        },
+        {
+          "id": "16-3",
+          "name": "Geheim",
+          "note": "U heeft dit level nooit gezien.",
+          "map": [
+            "#################",
+            "## .        #  ##",
+            "##  ##@  #    $##",
+            "###    . #  #  ##",
+            "#k#p##$. c##   ##",
+            "#####  #  #c    #",
+            "#####$ # c      #",
+            "#    $.##########",
+            "# # ## #    a####",
+            "#          b#####",
+            "#################"
+          ],
+          "legacy_id": "8-11"
+        },
+        {
+          "id": "16-4",
+          "name": "Gewaarmerkt",
+          "note": "Echt waar. Met een waarmerk.",
+          "map": [
+            "#################",
+            "###   ######b#  #",
+            "### $ ###c##@#p #",
+            "#. $  #      ## #",
+            "#  .###       c #",
+            "# ###p     #    #",
+            "#     . ##      #",
+            "### ##  ##     ##",
+            "###      ##  $$##",
+            "###.     ###   ##",
+            "#################"
+          ],
+          "legacy_id": "8-12"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "name": "Het Stempelarchief",
+      "motto": "Elke stempel heeft een eigen dossier.",
+      "levels": [
+        {
+          "id": "17-1",
+          "name": "Dubbel gestempeld",
+          "note": "Twee keer goedgekeurd is één keer afgekeurd.",
+          "map": [
+            "##############",
+            "###  r#### . #",
+            "#   # #k  .  #",
+            "#         # ##",
+            "#   #a      ##",
+            "# ###b  #  ###",
+            "#         . p#",
+            "##$      .#  #",
+            "# $$$  ## # r#",
+            "#  @#  ##    #",
+            "##############"
+          ],
+          "legacy_id": "8-13"
+        },
+        {
+          "id": "17-2",
+          "name": "Het Stempelarchief",
+          "note": "Elke stempel heeft een eigen dossier.",
+          "map": [
+            "#################",
+            "#####k    r  ####",
+            "#r##.  #  ## #a##",
+            "# ##*$###    ####",
+            "#  ...  ## $###a#",
+            "##k ##  ##  ##a #",
+            "### ##     $#   #",
+            "##p ## ## $   #c#",
+            "###r#  ## #     #",
+            "#####    @### # #",
+            "############  bp#",
+            "#####    k#c ####",
+            "#####         p##",
+            "#################"
+          ],
+          "legacy_id": "8-14"
+        },
+        {
+          "id": "17-3",
+          "name": "Stempelkamer B",
+          "note": "Stempelkamer A wordt sinds 2009 gerenoveerd.",
+          "map": [
+            "#################",
+            "######  c  #  ###",
+            "###### a#     ###",
+            "######     #   .#",
+            "#####   .   #  a#",
+            "#    .  ##  ##.##",
+            "#k  #   ## @# $ #",
+            "#         ##   c#",
+            "# # $ $ $ #  # ##",
+            "#   #######    ##",
+            "#################"
+          ],
+          "legacy_id": "8-15"
+        },
+        {
+          "id": "17-4",
+          "name": "De Gouden Stempel",
+          "note": "Slechts drie ambtenaren hebben hem ooit vastgehouden.",
+          "map": [
+            "##############",
+            "#..#       ###",
+            "#$ #   $## ###",
+            "#  #     $ ###",
+            "## # #########",
+            "#   $###pk#p##",
+            "#      @r#####",
+            "##      ######",
+            "#         ####",
+            "#  ###  . . b#",
+            "##############"
+          ],
+          "legacy_id": "8-16"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "name": "Bureau Wachtrijen",
+      "motto": "Uw wachttijd bedraagt: onbekend.",
+      "levels": [
+        {
+          "id": "18-1",
+          "name": "Nummertje 1",
+          "note": "U bent de eerste. Toch moet u wachten.",
+          "map": [
+            "#################",
+            "###### k##a  a###",
+            "######  ##     ##",
+            "####       ##  .#",
+            "#. .   #$ #  ## #",
+            "#k ## ##  # $#  #",
+            "#####.##  #     #",
+            "##### #.  #  #  #",
+            "#  $ $@$ ## $#  #",
+            "#      #####  . #",
+            "#################"
+          ],
+          "legacy_id": "9-1"
+        },
+        {
+          "id": "18-2",
+          "name": "Nummertje 412",
+          "note": "Nu aan de beurt: nummer 17.",
+          "map": [
+            "##############",
+            "### c#ka  a ##",
+            "### k#  #   ##",
+            "#       @  ###",
+            "#...      $$ #",
+            "#.#  #  ## # #",
+            "#k#  #  ##   #",
+            "###     $    #",
+            "#a#  #   $#  #",
+            "###p      ####",
+            "##############"
+          ],
+          "legacy_id": "9-2"
+        },
+        {
+          "id": "18-3",
+          "name": "Wachtkamer",
+          "note": "Met tijdschriften uit 1994.",
+          "map": [
+            "#################",
+            "##       #    k##",
+            "##$$     #  r####",
+            "# $ # #  #  #####",
+            "#           #####",
+            "# # # #         #",
+            "#        #  # $@#",
+            "# ##  #b c#.  # #",
+            "#  #  ##  #..   #",
+            "#   p####  .  ###",
+            "#################"
+          ],
+          "legacy_id": "9-3"
+        },
+        {
+          "id": "18-4",
+          "name": "Pauzescherm",
+          "note": "Wij zijn even weg. Terug om: ooit.",
+          "map": [
+            "##############",
+            "# .       r###",
+            "#    #  # .###",
+            "####    #  ###",
+            "####     .  ##",
+            "#   .       ##",
+            "#    ####  $##",
+            "######    #@ #",
+            "#  p# $   $$ #",
+            "#           ##",
+            "##############"
+          ],
+          "legacy_id": "9-4"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "name": "Klantcontactcentrum",
+      "motto": "Uw vraag is belangrijk voor ons. Blijft u aan de lijn.",
+      "levels": [
+        {
+          "id": "19-1",
+          "name": "Spreekuur",
+          "note": "Alleen op dinsdag van 9:00 tot 9:05.",
+          "map": [
+            "#################",
+            "## *k#kp##    ###",
+            "## # #  ## #  b##",
+            "##@$          k##",
+            "####  #       ###",
+            "#  # $#  # ## ###",
+            "#     # a#   .###",
+            "#.#  #####  # ###",
+            "# r. ###     .k##",
+            "###     $ #    ##",
+            "##c     #########",
+            "##   ##$k########",
+            "###      ########",
+            "#################"
+          ],
+          "legacy_id": "9-5"
+        },
+        {
+          "id": "19-2",
+          "name": "Terugbelverzoek",
+          "note": "U wordt teruggebeld. Wanneer staat nog niet vast.",
+          "map": [
+            "##############",
+            "#   .   # . ##",
+            "# r  ##    $##",
+            "#.## ## #   ##",
+            "#     #   .$##",
+            "# #    ##@  ##",
+            "#   #      $##",
+            "#  #   #     #",
+            "# a#a     $# #",
+            "#  #     #   #",
+            "##############"
+          ],
+          "legacy_id": "9-6"
+        },
+        {
+          "id": "19-3",
+          "name": "Muziek in de wacht",
+          "note": "U hoort deze melodie nog dagen.",
+          "map": [
+            "#################",
+            "#######     #  ##",
+            "#c      # $ #$ ##",
+            "#       # $##  ##",
+            "#  # ##     $  ##",
+            "# r# b# $### @..#",
+            "#a #     ##  #.*#",
+            "#    k ####r  ..#",
+            "#p#k##    #r ####",
+            "#b#k   c k#r ####",
+            "#################"
+          ],
+          "legacy_id": "9-7"
+        },
+        {
+          "id": "19-4",
+          "name": "Wachtrij voor de wachtrij",
+          "note": "Eerst een nummertje voor het nummertje.",
+          "map": [
+            "##############",
+            "#      #   ..#",
+            "#  # #$#   ..#",
+            "#  # $@#  # ##",
+            "# k###$   # ##",
+            "# ###  ##    #",
+            "# ### $      #",
+            "# #    ## # ##",
+            "#   # ###   a#",
+            "### a        #",
+            "##############"
+          ],
+          "legacy_id": "9-8"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "name": "Balie Afspraken",
+      "motto": "Afspraken maken kan alleen op afspraak.",
+      "levels": [
+        {
+          "id": "20-1",
+          "name": "Verkeerde balie",
+          "note": "Deze balie gaat over de andere balie.",
+          "map": [
+            "##############",
+            "## @##########",
+            "# $$ $ ##  . #",
+            "#  $   ##    #",
+            "# # .  ### . #",
+            "# #  #     # #",
+            "#            #",
+            "#     k#   c #",
+            "# # #    . ###",
+            "#bbc####   ###",
+            "##############"
+          ],
+          "legacy_id": "9-9"
+        },
+        {
+          "id": "20-2",
+          "name": "Afspraak verzet",
+          "note": "Uw afspraak is verzet naar de vorige afspraak.",
+          "map": [
+            "#################",
+            "#a p #####     ##",
+            "#  k #  c# #   ##",
+            "# k#       # $ ##",
+            "#     #   ###  ##",
+            "##  @       $$ ##",
+            "##  #    #    ###",
+            "###...     ####b#",
+            "#  .   #  $######",
+            "# r  r ##   a####",
+            "#################"
+          ],
+          "legacy_id": "9-10"
+        },
+        {
+          "id": "20-3",
+          "name": "Loket gesloten",
+          "note": "Het bordje hangt er al sinds de vorige reorganisatie.",
+          "map": [
+            "#################",
+            "#####k ##       #",
+            "###k## # $ #  # #",
+            "##c### $   #    #",
+            "##### @##$  $# ##",
+            "#####  ##    $  #",
+            "############# . #",
+            "##############..#",
+            "#############c..#",
+            "#############  ##",
+            "#################"
+          ],
+          "legacy_id": "9-11"
+        },
+        {
+          "id": "20-4",
+          "name": "Zelfbedieningszuil",
+          "note": "Het scherm reageert niet. Dat is de bedoeling.",
+          "map": [
+            "##############",
+            "# . .    #   #",
+            "# #  #      $#",
+            "#        #   #",
+            "#   #######  #",
+            "#  .   #     #",
+            "####   @  #  #",
+            "###  ## $    #",
+            "#bc   # $$  .#",
+            "#p    #      #",
+            "##############"
+          ],
+          "legacy_id": "9-12"
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "name": "De Wachtkamer",
+      "motto": "Neem een tijdschrift. Ze zijn van 1994.",
+      "levels": [
+        {
+          "id": "21-1",
+          "name": "Rij 7, stoel 3",
+          "note": "U zit goed. Uw dossiers niet.",
+          "map": [
+            "#################",
+            "#        #k #####",
+            "# ## r#     #####",
+            "# ######      $ #",
+            "#  ##    ##  #  #",
+            "##$#         #$ #",
+            "# $   #  #  ##@ #",
+            "# ##..##      ###",
+            "# ##..##   #$ ###",
+            "#    .###  #  ###",
+            "#################"
+          ],
+          "legacy_id": "9-13"
+        },
+        {
+          "id": "21-2",
+          "name": "De lange gang",
+          "note": "Aan het eind is een deur. Daarachter een gang.",
+          "map": [
+            "#################",
+            "#. # b   ####   #",
+            "#  #        .  .#",
+            "#  #####      ###",
+            "#         ###   #",
+            "# #.    # # c## #",
+            "#   #####     $ #",
+            "#   @$ #   c #  #",
+            "###       ##$#$ #",
+            "#######  ###    #",
+            "#################"
+          ],
+          "legacy_id": "9-14"
+        },
+        {
+          "id": "21-3",
+          "name": "Bijna aan de beurt",
+          "note": "Nog maar drie wachtenden. Met elk zeven dossiers.",
+          "map": [
+            "#################",
+            "##r#####a   ##  #",
+            "########  # # .p#",
+            "#######        ##",
+            "####### @   #  ##",
+            "#a    # ##     ##",
+            "#k#     . #  $###",
+            "#a   ## $  #  ###",
+            "## # ###     $###",
+            "#     c##$ #  ###",
+            "#b#. # #  #  ####",
+            "###$ # #  #   ..#",
+            "#p     #  #    a#",
+            "#################"
+          ],
+          "legacy_id": "9-15"
+        },
+        {
+          "id": "21-4",
+          "name": "Nummertje 999",
+          "note": "Het display springt terug naar 000.",
+          "map": [
+            "##############",
+            "#  #*.###p r##",
+            "#  #...    ka#",
+            "#  ##   #  ###",
+            "#  #### #   ##",
+            "#k ####    $ #",
+            "#  ##   # #  #",
+            "##  #     @$ #",
+            "##  #  # #$$ #",
+            "###        ###",
+            "##############"
+          ],
+          "legacy_id": "9-16"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "name": "Ministerie van Ministeries",
+      "motto": "Het hoogste loket. Alleen bereikbaar via een loket.",
+      "levels": [
+        {
+          "id": "22-1",
+          "name": "Ambtelijk vooroverleg",
+          "note": "Overleg over het overleg.",
+          "map": [
+            "#################",
+            "###   #  ######k#",
+            "## $   $ #  #####",
+            "##  $$#k #c b#k##",
+            "####  ## ## b####",
+            "#     #   #     #",
+            "#     #   #     #",
+            "#      @   ...  #",
+            "###b #   ###. #c#",
+            "###    #####    #",
+            "#################"
+          ],
+          "legacy_id": "10-1"
+        },
+        {
+          "id": "22-2",
+          "name": "Kamerbrief",
+          "note": "De Kamer is geïnformeerd. De dossiers nog niet.",
+          "map": [
+            "#################",
+            "###   ##  #   ###",
+            "#p    ##@ c   ###",
+            "#     ##       b#",
+            "###    ##       #",
+            "### ## #   ##  ##",
+            "###    $       ##",
+            "####$ #    #   c#",
+            "# $ $ ###    .  #",
+            "#     ###  #... #",
+            "#################"
+          ],
+          "legacy_id": "10-2"
+        },
+        {
+          "id": "22-3",
+          "name": "Coalitieakkoord",
+          "note": "Iedereen is het eens over de datum van de volgende vergadering.",
+          "map": [
+            "##############",
+            "###   ##     #",
+            "###k r##  $$ #",
+            "#... ###   ###",
+            "#k.    ##  ###",
+            "###        ###",
+            "### ###   @  #",
+            "#   #        #",
+            "# $ $     ####",
+            "#####   c ####",
+            "##############"
+          ],
+          "legacy_id": "10-3"
+        },
+        {
+          "id": "22-4",
+          "name": "Nota van Wijziging",
+          "note": "Alles blijft anders.",
+          "map": [
+            "#################",
+            "#a  c#p##########",
+            "#   #k#k## ..  k#",
+            "#p         ..  p#",
+            "#r b#  ##   @   #",
+            "#  #      #  ## #",
+            "####  #   ##### #",
+            "#  ## #         #",
+            "# $     $ # $ $ #",
+            "#      ######   #",
+            "#################"
+          ],
+          "legacy_id": "10-4"
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "name": "Beleidsdirectie",
+      "motto": "Wij maken beleid over het maken van beleid.",
+      "levels": [
+        {
+          "id": "23-1",
+          "name": "Interdepartementaal",
+          "note": "Elk ministerie duwt een dossier naar het andere.",
+          "map": [
+            "#################",
+            "### $ .#  #  # b#",
+            "###   k#  #  #  #",
+            "#   ####     #  #",
+            "#k #     # #   a#",
+            "#  # ## .# * #  #",
+            "#  #    k#####r #",
+            "#     # #########",
+            "## #c #   #     #",
+            "##.   # $     $ #",
+            "### #@####   #  #",
+            "#      .    ##$ #",
+            "#a         ###  #",
+            "#################"
+          ],
+          "legacy_id": "10-5"
+        },
+        {
+          "id": "23-2",
+          "name": "Begroting",
+          "note": "Er is geld voor dozen. Niet voor kasten.",
+          "map": [
+            "#################",
+            "#   #           #",
+            "# #   b#a$##  $ #",
+            "# #   ### ## ####",
+            "#   ###. $      #",
+            "#k  #...$@##  # #",
+            "#  # * ###      #",
+            "#      ###   #c #",
+            "# # ##   # # ##p#",
+            "# #        # #b##",
+            "#   # #   #   p##",
+            "#       #     ###",
+            "####  a #   #####",
+            "#################"
+          ],
+          "legacy_id": "10-6"
+        },
+        {
+          "id": "23-3",
+          "name": "Motie aangenomen",
+          "note": "Uitvoering volgt. Of niet.",
+          "map": [
+            "##############",
+            "##     # p####",
+            "##@  # #     #",
+            "####   ##  $ #",
+            "##    ###    #",
+            "##    ###$#$##",
+            "####  #      #",
+            "#.         # #",
+            "#.    #  #$# #",
+            "#..  ## k#   #",
+            "##############"
+          ],
+          "legacy_id": "10-7"
+        },
+        {
+          "id": "23-4",
+          "name": "Reorganisatie",
+          "note": "Alles verhuist. Behalve de koffieautomaat.",
+          "map": [
+            "#################",
+            "# @#  ##r    .k##",
+            "#$$#  ##   #k  ##",
+            "#. #  ###      ##",
+            "# $  ###b   # ###",
+            "# #  ###c.  # ###",
+            "#      ##       #",
+            "#        ## # $.#",
+            "####           k#",
+            "######   #    ###",
+            "#################"
+          ],
+          "legacy_id": "10-8"
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "name": "De Ministerraad",
+      "motto": "Op vrijdag besloten, op maandag herzien.",
+      "levels": [
+        {
+          "id": "24-1",
+          "name": "Staatssecretaris",
+          "note": "Niet aanwezig. De secretaris ook niet.",
+          "map": [
+            "##############",
+            "##     ##    #",
+            "#   ## $  $# #",
+            "#k #  $$@    #",
+            "## # ##      #",
+            "#c   ###     #",
+            "#      #  # c#",
+            "# ..#        #",
+            "##.#      ####",
+            "##.      #####",
+            "##############"
+          ],
+          "legacy_id": "10-9"
+        },
+        {
+          "id": "24-2",
+          "name": "Ministerraad",
+          "note": "Vrijdag. Na afloop: persconferentie over dozen.",
+          "map": [
+            "#################",
+            "#       ###  #  #",
+            "# ## ##  ##    @#",
+            "#   $##  ##  # b#",
+            "#     $ ##   ####",
+            "######$$## #    #",
+            "######         .#",
+            "######    #  ##.#",
+            "#####   #     ..#",
+            "#####       #   #",
+            "#################"
+          ],
+          "legacy_id": "10-10"
+        },
+        {
+          "id": "24-3",
+          "name": "Parlementaire enquête",
+          "note": "Onder ede: waar staat dossier 47?",
+          "map": [
+            "#################",
+            "###          apc#",
+            "### $#     #p####",
+            "### $  #     ####",
+            "#### ###     ####",
+            "#  $  #   ##..b #",
+            "#  $      ##..  #",
+            "###@ #b     #   #",
+            "###  #c#      ###",
+            "###    #  #   ###",
+            "#################"
+          ],
+          "legacy_id": "10-11"
+        },
+        {
+          "id": "24-4",
+          "name": "Regeerakkoord",
+          "note": "Vierhonderd pagina's. Allemaal in deze kamer.",
+          "map": [
+            "#################",
+            "#       ######  #",
+            "# $$#@# ##      #",
+            "# $     ##   #  #",
+            "#a##    ###  ##.#",
+            "#####        #..#",
+            "######  #   ## .#",
+            "####r#a ######  #",
+            "###a##########$ #",
+            "#####r########  #",
+            "#################"
+          ],
+          "legacy_id": "10-12"
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "name": "Het Juiste Loket",
+      "motto": "Het einde van de procedure. Bijna.",
+      "levels": [
+        {
+          "id": "25-1",
+          "name": "Archiefwet",
+          "note": "Wat hier staat, staat hier voor altijd.",
+          "map": [
+            "#################",
+            "#######   .    ##",
+            "####b #  .     ##",
+            "#      ######  ##",
+            "#   ##@#####    #",
+            "## #  $  ##    .#",
+            "## $  $   #  #  #",
+            "#####$ #.     ###",
+            "#####     ## a###",
+            "########      ###",
+            "#################"
+          ],
+          "legacy_id": "10-13"
+        },
+        {
+          "id": "25-2",
+          "name": "Kabinetsformatie",
+          "note": "Duurt langer dan dit level. Hopelijk.",
+          "map": [
+            "##############",
+            "#  ##### b#..#",
+            "# $  ###  #..#",
+            "# $ $  #  #  #",
+            "# #$     #   #",
+            "#    #       #",
+            "###      #   #",
+            "##  ###  #   #",
+            "##k  @     # #",
+            "##   r #   a #",
+            "##############"
+          ],
+          "legacy_id": "10-14"
+        },
+        {
+          "id": "25-3",
+          "name": "De Hoogste Ambtenaar",
+          "note": "Tekent alles. Als het te vinden is.",
+          "map": [
+            "#################",
+            "## p            #",
+            "##    ..## # $# #",
+            "##  # #..  # $  #",
+            "##          #$$ #",
+            "#  k# #  # r# ###",
+            "# c#   ###  #  ##",
+            "#  #           ##",
+            "#rk#  # # ##   ##",
+            "####  #@  ##  ###",
+            "#################"
+          ],
+          "legacy_id": "10-15"
+        },
+        {
+          "id": "25-4",
+          "name": "Het Juiste Loket",
+          "note": "U heeft het gevonden. Archiveer dit, en de procedure is voltooid.",
+          "map": [
+            "##############",
+            "#####  #   ###",
+            "#####  #    ##",
+            "#####  ##$ $ #",
+            "######    $  #",
+            "#k #     #@$ #",
+            "#.   #   ## ##",
+            "#..   #     ##",
+            "#. #       ###",
+            "####  ########",
+            "##############"
+          ],
+          "legacy_id": "10-16"
+        }
+      ]
     }
   ]
 }

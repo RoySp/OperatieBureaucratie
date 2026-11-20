@@ -17,6 +17,7 @@ class Level:
     rows: List[str]
     department: "Department"
     index: int  # global index 0..n-1
+    legacy_id: Optional[str] = None  # id in the 16-levels-per-department build
 
     def make_board(self) -> Board:
         return Board.from_rows(self.rows)
@@ -51,13 +52,17 @@ class LevelPack:
             dept = Department(int(d["id"]), d["name"], d.get("motto", ""), [])
             for lv in d.get("levels", []):
                 level = Level(str(lv["id"]), lv["name"], lv.get("note", ""),
-                              list(lv["map"]), dept, len(self.levels))
+                              list(lv["map"]), dept, len(self.levels), lv.get("legacy_id"))
                 level.make_board()  # validate early
                 dept.levels.append(level)
                 self.levels.append(level)
             self.departments.append(dept)
         if not self.levels:
             raise LevelFormatError("Geen levels gevonden")
+
+    def legacy_map(self) -> dict:
+        """Old level id -> current level id, for upgrading older save games."""
+        return {lv.legacy_id: lv.id for lv in self.levels if lv.legacy_id}
 
     def by_id(self, level_id: Optional[str]) -> Optional[Level]:
         for lv in self.levels:
@@ -71,10 +76,11 @@ class LevelPack:
         return None
 
     def is_unlocked(self, level: Level, save) -> bool:
-        """A level opens when it or its predecessor has been completed."""
-        if level.index == 0 or save.is_completed(level.id):
+        """A level is open when it is completed, when the secret 'unlock all'
+        mode is on, or when every level before it has been completed."""
+        if save.is_completed(level.id) or getattr(save, "unlock_all", False):
             return True
-        return save.is_completed(self.levels[level.index - 1].id)
+        return all(save.is_completed(lv.id) for lv in self.levels[:level.index])
 
     def continue_level(self, save) -> Level:
         """First unfinished unlocked level, or the last one played."""
