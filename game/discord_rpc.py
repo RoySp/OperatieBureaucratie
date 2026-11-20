@@ -10,8 +10,10 @@ from __future__ import annotations
 
 import json
 import os
+import stat
 import struct
 import sys
+import tempfile
 import threading
 import time
 import uuid
@@ -28,11 +30,36 @@ RETRY_INTERVAL = 15.0   # how often to look for a (re)started Discord app
 def _pipe_paths():
     if sys.platform == "win32":
         return [rf"\\?\pipe\discord-ipc-{i}" for i in range(10)]
-    base = (os.environ.get("XDG_RUNTIME_DIR") or os.environ.get("TMPDIR")
-            or os.environ.get("TMP") or os.environ.get("TEMP") or "/tmp")
-    dirs = [base, os.path.join(base, "app", "com.discordapp.Discord"),
-            os.path.join(base, "snap.discord")]
+    # Prefer the private per-user runtime dir; otherwise the system temp dir
+    # (per-user on macOS). Sockets there are only used when _is_own_socket()
+    # confirms they belong to us, so another user cannot plant a fake one.
+    bases = []
+    for base in (os.environ.get("XDG_RUNTIME_DIR"), tempfile.gettempdir()):
+        if base and base not in bases:
+            bases.append(base)
+    dirs = [d for base in bases for d in (
+        base, os.path.join(base, "app", "com.discordapp.Discord"), os.path.join(base, "snap.discord"))]
     return [os.path.join(d, f"discord-ipc-{i}") for d in dirs for i in range(10)]
+
+
+def _is_own_socket(st: os.stat_result, uid: int) -> bool:
+    """True for a unix socket (not a symlink) owned by the current user."""
+    return stat.S_ISSOCK(st.st_mode) and st.st_uid == uid
+
+
+def _connect_unix(path: str):
+    import socket
+    st = os.lstat(path)  # lstat: never follow a symlink someone else placed
+    if not _is_own_socket(st, os.getuid()):
+        raise OSError(f"{path} is geen socket van deze gebruiker")
+    s = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
+    s.settimeout(5)
+    try:
+        s.connect(path)
+    except OSError:
+        s.close()
+        raise
+    return s
 
 
 class _PipeTransport:
@@ -46,11 +73,7 @@ class _PipeTransport:
                     self._f = open(path, "r+b", buffering=0)
                     self._sock = None
                 else:
-                    import socket
-                    s = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
-                    s.settimeout(5)
-                    s.connect(path)
-                    self._sock = s
+                    self._sock = _connect_unix(path)
                     self._f = None
                 return
             except OSError as exc:

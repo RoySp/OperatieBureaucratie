@@ -1,6 +1,7 @@
 """Discord Rich Presence client, tested against a fake Discord IPC endpoint."""
 import json
 import os
+import stat
 import struct
 import sys
 import unittest
@@ -152,6 +153,24 @@ class DiscordPresenceTest(unittest.TestCase):
         p.set(ACT_A)
         p.step()
         self.assertEqual(FakeDiscord.instances, [])
+
+
+class SocketSafetyTest(unittest.TestCase):
+    """On Linux/macOS only a socket owned by the player is trusted."""
+
+    @staticmethod
+    def st(mode, uid):
+        return os.stat_result((mode, 0, 0, 1, uid, 0, 0, 0, 0, 0))
+
+    def test_own_socket_accepted(self):
+        self.assertTrue(discord_rpc._is_own_socket(self.st(stat.S_IFSOCK | 0o600, 1000), 1000))
+
+    def test_socket_of_other_user_rejected(self):
+        self.assertFalse(discord_rpc._is_own_socket(self.st(stat.S_IFSOCK | 0o777, 0), 1000))
+
+    def test_symlink_or_file_rejected(self):
+        self.assertFalse(discord_rpc._is_own_socket(self.st(stat.S_IFLNK | 0o777, 1000), 1000))
+        self.assertFalse(discord_rpc._is_own_socket(self.st(stat.S_IFREG | 0o600, 1000), 1000))
 
 
 if __name__ == "__main__":
